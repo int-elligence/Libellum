@@ -33,14 +33,15 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
     <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/stylesheet.css">
-
-    <!-- Typeaheadjs -->
-    <script src="The%20Harvard%20Advocate%20index_files/typeahead.js"></script>
-    <script src="The%20Harvard%20Advocate%20index_files/typeahead_002.js"></script>
-    <script src="The%20Harvard%20Advocate%20index_files/bloodhound.js"></script>
+<!-- Typeaheadjs -->
 <!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/search_style.css">-->
+    
+<!--    <script src="The%20Harvard%20Advocate%20index_files/typeahead.js"></script>-->
+<!--    <script src="The%20Harvard%20Advocate%20index_files/typeahead_002.js"></script>-->
+<!--    <script src="The%20Harvard%20Advocate%20index_files/bloodhound.js"></script>
+    
 
-    <script type="text/javascript">
+<script type="text/javascript">
         $(document).ready(function () {
             var authors = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
@@ -105,14 +106,20 @@
                 $(this).find('input[type=submit]').hide();
             });
         });
-    </script>
+    </script>-->
     <style>
+        @media only screen (max-width : 480px){
+            .title-top h1.main-title{
+                margin-top: 0px;
+            }
+        }
         .title-top {
             line-height: auto;
         }
         .title-top h1.main-title {
             margin: 25px;
             margin-bottom: 0px;
+            
             padding: 0px;
             letter-spacing: 5px;
             font-size: 60px;
@@ -127,7 +134,7 @@
         }
         header.container {
             /*            padding-right: 30px;*/
-            padding-top: 10px;
+            padding-top: 0px;
 /*            width: 100%;*/
             /*            height: 70px;*/
             /*            position: relative;*/
@@ -158,6 +165,11 @@
 
         div.header-image.img-responsive {
             border-top: 1px solid black;
+            background-image: url('/pictures/modern-classics-banner.jpg');
+        }
+        no-margin-padding{
+            margin:0px;
+            padding: 0px;
         }
     </style>
 </head>
@@ -173,7 +185,7 @@
 <body class="container-fluid">
     <header class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 f-t-links top-line">
+            <div class="hidden-sm-down no-margin-padding col-xs-12 col-sm-12 col-md-3 col-lg-3 f-t-links top-line">
       </div>
             <div class="title-top col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align: center;">
                 <!-- <figure><img src="/static/magazine/images/seal_banner.jpeg" class = "logo-container" alt="Main Image" ></figure> -->
@@ -183,8 +195,8 @@
                 </a>
             </div>
 <!--            <center>-->
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 top-line" style="text-align: center;">
-                    <div class="form-group search-group">
+                <div class="hidden-sm-down no-margin-padding col-xs-12 col-sm-12 col-md-3 col-lg-3 top-line" style="text-align: center;">
+                    <!--<div class="form-group search-group">
                         <form type="get" action="/search/" class="search-form" role="search">
                             <input type="text" name="q" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Search">
                             <hr class="search-bottom-border">
@@ -198,14 +210,14 @@
                                 <a class="no-decoration top-line" href="#">Donate</a>
                             </li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
 <!--            </center>-->
         </div>
 
     </header>
     <!-- <hr class = "navbar-divider"> -->
-    <div class="container behind-search affix-top" data-spy="affix" data-offset-top="300" data-offset-bottom="0">
+    <div class="container behind-search affix-top" data-spy="affix" data-offset-top="300" data-offset-bottom="0" style="padding:0px;">
         <nav class="navbar navbar-default  advo-navbar" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -227,7 +239,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse ">
-                <div class="nav-header"></div>
+<!--                <div class="nav-header"></div>-->
                 <ul class="nav navbar-nav">
                     <li><a href="https://theharvardadvocate.com/about">ABOUT</a>
                     </li>
@@ -261,12 +273,51 @@
         <a href="https://theharvardadvocate.com/">
 
         </a>
-        <div style="background-image: url('//theharvardadvocate.com/static/magazine/images/banner_summer2015.jpg')" class="header-image img-responsive" alt="Main Image">
+        <div class="header-image img-responsive" alt="Main Image">
             <a href="https://theharvardadvocate.com/">
 
             </a>
 
         </div>
+        <style>
+            .header-bottom-list-li h1{
+                margin-top: 0px;
+                padding-top: 30px;
+/*
+                padding-left: 0px;
+                padding-right: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+*/
+            }
+            .header-bottom-list-ul li.header-bottom-list-li,
+            .subjumbo-row{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .subjumbo-h{
+                margin-top:0px;
+                font-size: 18px;
+            }
+/*
+            .header-bottom-list-ul li.header-bottom-list-li:last-child{
+                padding-right: 5px;
+            }
+            .header-bottom-list-ul li.header-bottom-list-li:first-child{
+                padding-left: 5px;
+            }
+*/
+        </style>
+        <div class="row-fluid subjumbo-row col-sm-12">
+            <h3 class="header subjumbo-h no-underline" >providing an extracurricular opportunity for students interested in classical languages, literature, or culture to gain access to the wider world of scholarly and artistic work influenced by the classics
+            </h3>
+        </div>
+<!--
+                    <ul class="list-inline header-bottom-list-ul">
+                        <li class="header-bottom-list-li col-xs-12 col-sm-6" ><h1 class="header no-underline" ><a href="https://theharvardadvocate.com/submit">SUBMIT</a></h1></li>
+                        <li class="header-bottom-list-li hidden-xs col-sm-6" ><h1 class="header no-underline" ><a href="https://theharvardadvocate.com/issue/fall-2015/">SUBSCRIBE</a></h1></li>
+                    </ul>    
+-->
 
         <!-- <hr class = "navbar-divider"> -->
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -278,7 +329,7 @@
 
             <!-- <img src="/static/magazine/images/comm_crop.jpeg" class = "header-image img-responsive" alt="Main Image" > -->
             <div class="container second-c">
-                <h1 class="header">CURRENT ISSUE: <a href="https://theharvardadvocate.com/issue/fall-2015/"> Fall 2015 </a></h1>
+                
 
 
 
@@ -570,7 +621,7 @@ compliments and mirrors, to give you a sense of the girl.</span>
                 <nav class="navbar navbar-default advo-navbar footer-navbar" role="navigation">
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <ul class="nav navbar-nav footer-navbar">
-                        <li> <a href="https://theharvardadvocate.com/advertise">ADVERTISE</a>
+                        <li> <a href="https://theharvardadvocate.com/news">NEWS</a>
                         </li>
                         <li><a href="https://theharvardadvocate.com/alumni">ALUMNI</a>
                         </li>
