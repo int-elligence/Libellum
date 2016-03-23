@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+
+    <title>LIBELLUM Germantown Friends</title>
+    <meta name="description" content="Harvard's undergraduate journal of fiction, poetry, art and criticism.">
+    <meta name="author" content="The Harvard Advocate">
+
+
+
+    <link rel="shortcut icon" href="https://theharvardadvocate.com/static/magazine/images/favicon.ico" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/bootstrap.css">
+    <!-- Making Credit Cards look nice -->
+<!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/card.css">-->
+    <!--  Theme -->
+    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/bootstrap-theme.css">
+    <!-- Latest JQuery -->
+<!--    <script src="The%20Harvard%20Advocate%20index_files/analytics.js" async=""></script>-->
+    <script src="The%20Harvard%20Advocate%20index_files/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="The%20Harvard%20Advocate%20index_files/bootstrap.js"></script>
+    <!-- Making Credit Cards look nice -->
+<!--    <script src="The%20Harvard%20Advocate%20index_files/card.js"></script>-->
+
+    <!-- Advocate Javascript -->
+    <script src="The%20Harvard%20Advocate%20index_files/main.js"></script>
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/stylesheet.css">
+
+    <!-- Typeaheadjs -->
+    <script src="The%20Harvard%20Advocate%20index_files/typeahead.js"></script>
+    <script src="The%20Harvard%20Advocate%20index_files/typeahead_002.js"></script>
+    <script src="The%20Harvard%20Advocate%20index_files/bloodhound.js"></script>
+<!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/search_style.css">-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var authors = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                local: $.map(["?? ???", "Abram Kaplan", "Adam Fitzgerald", "Adam Palay", "Adam Scheffler", "Alexander Fabry", "Alexander J.B. Wells", "Alexander Traub", "Alexander Wells", "Alice Ju", "Alistair Debling", "Allan Peterson", "Allison Keeley", "Alyssa Moore", "Amelia Klein", "Amit Chaudhuri", "Amy Lien", "and Thompson Potter", "Andrew Nunnelly", "Anna Barnet", "Anna Hagen", "Anna Koeferl", "Anna Murphy", "Aria Bendix", "Artemisha Goldfeder", "Ashleigh Cote", "Aurora Andrews", "Avery Williamson", "Aznavur Dustmamatov", "Bailey Trela", "Ben Blumstein", "Ben Cosgrove", "Ben Loory", "Ben Sobel", "Bianca V\u00e1zquez", "Brad Bolman", "Brandon Seah", "brittany benjamin", "Bruce Boucher", "Caleb Lewis", "Carolyn Gaebler", "Charlotte Lieberman", "Christian Lavista", "Christine Legros", "Christopher Alessandrini", "Clancy Martin", "Colleen O'Brien", "Colton Valentine", "Connie Fu", "Cora Currier", "Courtney Bowman", "D. A. Powell", "D.T. Max", "Dan Ashwood", "Dan Chiasson", "Dan Citron", "Dan Cole", "Dana Kase", "Daniel Schwartz", "Daniel Wenger", "Danny Bredar", "David Ferry", "David Ingenthron", "David Rice", "David Wallace", "Denis Johnson", "Design Board", "Dis Magazine", "Dorothea Lasky", "Dwight Livingstone Curtis", "Eli Schleicher", "Elise Adibi", "Elliot Holt", "Emeline Atwood", "Emily Chertoff", "Emma Banay", "Emmie Atwood", "Enzo Camacho", "Eric Brewster", "Eric Roff Brewster", "Erica X Eisen", "Erik Fredericksen", "Ernesto Gaxha", "Ethan Loewi ", "Ethan Pierce", "Eva DeLappe", "Ezra Huang Stoller", "Fady Joudah", "Faye Yan Zhang", "Frantz Zephirin", "Georgia Stasinopoulos", "Georgina Parfitt", "Geraldine Brooks", "Glenn Ligon", "Grant Ginder", "Hans Haacke", "Harry CH Choi", "Harvard Advocate Staff", "Helen Shi", "Henri Cole", "Henry Shah", "Hilton Als", "Hunter Jones", "Indiana Seresin", "Ingrid Pierre", "Irina Rozovsky", "Iris H\u00e4ussler", "Isaac Dayno", "Isidore Bethel", "Ivan de Monbrison", "Ivy Pan", "J. Camp Brown", "Jacob Moscona-Skolnik", "Jamaica Kincaid", "James Maxwell Larkin", "James Powers", "Jerome Karsenti", "Jesse Barron", "Jesse Nee-Vogelman", "Jessica Sequeira", "Joao Pedro Rodrigues", "Joe Masterman", "John Bryant", "John Hughes", "John Koethe", "Josh  Bell", "Julia Rooney", "Julian Avery Leonard", "Julian Avery Leonard & Eric Brewster with the Generalist", "Julian Gewirtz", "Julian Lucas", "Justin Keenan", "Justin Wymer", "Kara Walker", "Kara Zona", "Katarina Burin", "Kate Massinger", "Katherine Agard", "Katherine Damm", "Kathleen Hale", "Kathryn Davis", "Kaveh Danesh", "Kayla Escobedo", "Keoni Correa", "Kevin Hong", "Kiwao Nomura", "Kurt Slawitschka", "Kyle McAuley", "Lara Zysman", "Laura Kasischke", "Lauren Ianni", "Leah Xue", "Lev Craig", "Lily Scherlis", "Lily Yeh", "Lincoln Michel", "Linda Liu", "Liz Magic Laser", "Liza Batkin", "Liza Flum", "Loren Galler Rabinowitz", "Louisa Denison", "Madeleine Schwartz", "Maia Silber", "Margaret Ross", "Margot Grenade", "Maria Vassileva", "Maria Xia", "Marjorie Welish", "Mark Chiusano", "Marta Figlerowicz", "Mary Catherine Curley", "Mary Potter", "Matt Aucoin", "Matt Krane", "Matt Saunders", "Matthew Browne", "Matthew Zapruder", "Megha Majumdar", "Michael M. Weinstein", "Michael Stynes", "MICHAEL THORBJ\u00d8RN FEEHLY", "Mika Seifert", "Miles Hewitt", "Mindy Yi", "Misha Goldfeder", "Moeko Fujii", "Molly Dektar", "Molly Fitzpatrick", "My Ngoc To", "Naomi Funabashi", "Nasir Husain", "Noah Pisner", "Olga Moskvina", "Oliver Luo", "Oliver Strand", "Olivia Munk", "Patrick Lauppe", "Paul C. Taylor", "Paul Whang", "Peter Liversidge", "Rachael Goldberg", "Rachel Libeskind", "Rebecca Cooper", "Rebecca Levitan", "Rebecca Lieberman", "Reina Gattuso", "Richard Beck", "Robbie Burr Eginton", "Robert Kim", "Roland Yang", "Rumur Dowling", "Ryan Adams Murphy", "Ryan Adams Murphy with Julian Avery Leonard", "Ryan MacLennon", "Ryan Meehan", "Sabrina Chou", "Sally Scopa", "Sam Reynolds", "Sam Wolk", "Sanders Bernstein", "Sara Stern", "Sarah Hopkinson", "Sarah Rosenthal", "Scott Roben", "Selena Kim", "Sharon Wang", "Simon Critchley", "Sofia Groopman", "Sohin Hwang", "Sophie Duvernoy", "Spencer Burke", "Spencer Strubb", "Stephanie Newman", "Stephanie Wang", "Stephen Burt", "Sydney Bradley ", "Tamilyn Chen", "Taylor Davis", "Taylor Lessard", "Tez Clark", "The Advocate Editorial Board", "The Barefoot Artists", "The Harvard Advocate", "The Harvard Advocate & Robert Kiely", "Theo Jansen", "Thompson Potter", "Tiffany Stanley", "Tom Thayer", "Tyler Richard", "Tyrone Williams", "Victor Fet", "Victoria Baena", "Vincent Craig Wright", "WANJIKU MUNGAI", "Warner James Wood", "William Fuller", "Xinran Yuan", "Yan Yan Mao", "Zo\u00eb Hitzig"], function (author) {
+                    return {
+                        name: author
+                    };
+                })
+            });
+
+            var titles = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                local: $.map(["I am filling the creases", "An Interview with Issey Miyake", "[There are days blurred]", "Twilight of the Libraries", "The Rejection of the Regionalists: Wyeth, Wood, and the New Americans", "Cartography and Memory", "Tracking", "Theme Park", "[Our bodies are full of veins and yet]", "Saturation", "Four Ways of Seeing: Fernando Pessoa\u2019s The Book of Disquiet", "How the Avant-Garde Got Popular (or Not)", "Complete Strangers (Excerpt)", "Snowbound (excerpt)", "Spinifex Fire", "Disorder/Rabbit", "Photeine", "How the Water", "N? Catharsis", "The Watchmaker", "Aftermath", "A Mechanical Scrutiny", "Parents", "Pop Adolescent: A Personal History, With Lawnmowers", "Summoning", "Orchids", "THE NUMBERS 1 TO 10, EACH NUMBER ON ITS OWN PAGE", "The Moth Garden", "Antaeus", "On Seeing My First Western", "Drowned Towns: Preserving the Lost Communities of the Swift River Valley", "South Pole Station", "The Art of Identity: Memory as the Maker", "Things I Will Say to Mrs. B.", "Get With the Program: Creative Writing in the Twentieth Century", "Running Amok", "Made of Vice", "Lost Things", "Pinhole of Light: John Updike's Philosophy of the Self", "Born Naked", "The One About Us", "Words on a Page: An Interview with Junot Diaz", "Notes From 21 South Street: Art in Hand: A Conversation with Lawrence Voytek and Peter Ballantine", "Sarajevo Rose", "The Concert", "Bivalence", "[In my dream the old woman had a ribbon for the boy]", "A Pound of Flesh for the Venice Biennale", "No Refunds", "Faith Noir: On Graham Greene and the Catholic Novel", "Fireworks", "Return", "Down by the Piraeus", "Fever Dreams", "Animals in Western Art: From Magic to Science ", "Eel and Water", "medusae", "Atticus", "People of the Glades", "Myrddin Wilt, Myrddin Emrys, Merlinus Silvestri,  Merlinus Celidonus, Merlinus Ambrosius, Merlin:  A Bestiary Entry", "The Buddha", "The Sound Collectors", "Manhattan, Here and There", "Love Letters to Socialism?", "Goodnightsparklehorseasleepinthebellyofamerica", "Good Soil", "Ours is the God of the Flood and the Famine", "Should I Bring Flowers", "Landscape with an Aspen", "[born: drops, of water, of]", "Problems Worth Having", "[Myself am green in this:]", "[A sonnet. Eve was curious but bold.]", "Romain Gary: A Short Biography", "Slouching Towards Hollywood", "Catching Proteus", "Envoy: Carriers", "Bear", "Bread", "Drifter Jim", "Night Hunt", "Atonement", "Morning Meets the Lodge", "Last Winter", "Putting Up Preserves", "Root Canal", "Political Footnotes", "Alba", "[Music finds me twenty miles down silence]", "[Two birds flew around a branch]", "Dugout", "Blood Orange", "At the Estuary", "Brief Reports", "Starchitects: Designing for Outer Space", "Gypsies", "[If my skull were a circle of light]", "Haus of Gaga", "The Starlight on Idaho", "[Open ocean falls]", "Poem", "Dressing Up", "(???????????[or Manhattan]", "(or Manhattan) [translated]", "???????? (The Sea Beyond This World)", "The Sea Beyond This World [translated]", "Ambitions", "Of the Dead White Men", "Is Utopianism Dead?", "Inscription", "The Poem of the Mind", "A Man Dispatched", "Rain and Mountains", "After the Law", "Your Horoscope", "Plans", "A Moment of Mishearing", "Xixtaberri", "Envoy: To Build a Deck", "The Washing Room", "Envoy: A Short Discussion of Even Longer Words", "Cuccaro", "Our Prayer", "[I stiffen: again]", "Poem", "Aria (I & II)", "Locus", "How to Light the Pilot in a Gas Stove \u2013 In Search of Lost Know-How, 2010", "How to Slick Back Hair \u2013 In Search of Lost Know-How, 2010", "Interview with Sheila Heti", "The Snare (I & II)", "With Chinese Characteristics", "Climbing Flying Mountain", "Kore", "Above Ground", "[The sunset-red boy]", "Naturaleza Muerta", "An Understanding", "The Clew", "March", "Havahart", "Envoy: From Deep to Dark", "The Knife Behind the Smile", "The Holiday", "Arms", "On Names Recurring", "Psyche in Bed", "Finest House in the Colony", "We Were Supposed", "William Topaz McGonagall and the Disaster over Tay: What Happened in that Life and on that Day", "A Compression", "Self-Portrait", "Poland", "Off Day At the Track", "Air Conditioning", "The Persian Pageant", "World Peace Hotel", "To Autumn", "Fine China for Special Occasions", "Occupy Boston: Pre-Eviction", "MADE", "Self-Portrait in a Flat Screen", "The Drop", "Swallows", "The last of winter", "The Piano Lesson", "Taxonomy", "Seem Tame", "Winter Sketch", "Will Not Come Back ", "A Hawthorn, Rooted Close to Other Guests", "\u201cMrs. Xia,\u201d Part III", "Car Parked on Quentin, Being Washed", "Birds", "Good Night", "A King and a Mistress", "Spring Break", "Celebrating Adrienne Rich", "Young Sick Bacchus", "[untitled]", "Blame Mariel (Excerpt)", "Animal Stories", "A Matter of Taste", "Why I Like Solving Puzzles", "Clinical", "The Habit of His Verse", "Matryoshka", "Virgil's Aeneid Translation of Book I. 1-34", "The Writer", "Pieces of a Man", "Ways of Looking and Feeling", "[for soul is this]", "One on One", "The Tour", "10,000 Chairs of Harvard", "Headwaters", "Origins", "In Transit", "Two Stories from Garden of Sorrows", "Interview with Martin Amis", "Origin: Editor's Note", "The Endless", "Narcissus", "[On wet grass]", "Motel", "The Urban Colony", "The Race for Kgale Hill", "On Zeuxis", "seascapes from time exposed", "Mothlight", "No breath left to dissemble", "Collisions", "London Can Take It!", "The Moon", "The Birthday Party", "What You Need to Know About the Weathervane", "Fantasy wears a yellow dress", "Dylan", "Interview with Andr\u00e9 Aciman", "I Won\u2019t Watch No Reruns", "Fum", "Drinking Salt in the Dawn", "War and Cancer", "The Bridge", "Portraits of Still Lives: A Review", "The Tale of a Prime Minister and a Golden Bedbug", "Escape", "Ask", "Akimbo", "The Heat", "24 Trials", "Routine Car Stop", "Inventory", "Help Me With This", "Tribute to Seamus Heaney", "Snarking Towards Bethlehem: The Gawker Manifesto That Wasn\u2019t", "Against New Feminism", "Interview with George Saunders", "The January Tunnel", "Here's a Good One", "Last Rites: A Chinese Burial", "Night Bus", "Dollar Dollar Bill", "Eulogy for a Cosmonaut", "For The Crew Marooned On an Island in the Aegean Sea", "Barnacle and Patina", "Depression", "SantaCon is Coming to Town", "Aniseed in sand", "Waltz Emporium", "Ukrainian Identity and Mykola Kulish\u2019s Sonata Path\u00e9tique", "The Aftershock", "The Feasting", "Ansatz: Confronting a Still Life", "Venero", "Lagomorph", "The 450-Year-Old-Man", "The Zoologist", "In Memoriam", "From the Google Maps Car", "Syllogistic", "The Letter", "Prester John", "Good Fences Make Good Neighbors", "Nearsight", "Just Say No", "Shugut", "Discoloration", "Portraits of Mao", "Adiabatic", "Notes on Nonsense", "Ruth Thal\u00eda writes to the poet", "The Lease", "An Interview With \u00c9tienne Balibar", "When the Mammy Sphinx Gawks Back at You!", "Full Circle: (Exotic) Odysseys Through (Oriental) Rainforests on (Outlawed) Tour Buses", "Their Party", "Two Poems: Occupying Memory", "A Love Letter to My Stepmother", "Setbreak  |  Viaticum", "The Next Generation", "After Watching Ice Age Three", "Leafscape and Lullaby", "The Inheritance", "Getting the Picture.", "Engine On.", "Obscenity test, for polite company", "Original", "Polonius to Prufrock", "Basic Problems in Poetry", "A. Suspendisse", "The Breadfruit", "Pythagoreans", "Anomie", "Possession: Editor's Note", "Queenie's On The Strip", "Desktop I", "Desktop II", "Aquamanile in the Form of Phyllis and Aristotle", "Editor's Note: Spring 2015", "Journalistic Ethics at Harvard", "Fantasy, Action, and Acting Out", "The Many Lessons of Cannibalism", "Broad City's Amorphous Partiality", "At the Edges", "\"Watch Me\"", "The Smut Spectrum", "Sisyphus & Mary Jane", "1-800-TOILETS", "\u2018Cypress scepters in the rocks, paint-green water...\u2019", "Three Tales of Displacement", "Editor's Note: Summer 2015", "Love on the Installment Plan", "Congregation", "Back of the Barn", "Harajuku Days", "Kollini Played the Two Sticks", "Click to Watch in HD: The Model, Theory, & Aesthetics of Islamic State Media", "Preparation ritual", "Official Happiness", "Sestina of the Missile JFK", "\u2018I'm sad I'm not a beast...\u2019", "Addiction Takes a Postmodern Spin", "A Perfume of One's Own", "Antebellum Fauxstalgia", "\"SHARE\"\u2014If You Dare", "The Birthday Boy", "The Cock", "CityTarget Sees Itself", "Bodies In Space", "Witness -> Translation -> Adjective Verse?", "Monocult", "W.G. Sebald: Writing around Destruction", "Moles", "Sunset", "hear fell their sinew", "Your Anarchist Stroll Through Barcelona", "Editor's Note: Fall 2015"], function (content) {
+                    return {
+                        title: content
+                    };
+                })
+            });
+
+            authors.initialize();
+            titles.initialize();
+
+            $('input.typeahead').typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            }, {
+                name: 'Authors',
+                highlight: true,
+                displayKey: 'name',
+                source: authors.ttAdapter(),
+                templates: {
+                    header: '<h3 class="typeahead-datasets">Authors</h3>',
+                    suggestion: function (data) {
+                        return '<p align="right">' + data.name + '</p>';
+                    }
+                }
+            }, {
+                name: 'Titles',
+                displayKey: 'title',
+                source: titles.ttAdapter(),
+                templates: {
+                    header: '<h3 class="typeahead-datasets">Titles</h3>',
+                    suggestion: function (data) {
+                        return '<p align="right">' + data.title + '</p>';
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('form').each(function () {
+                $(this).find('input').keypress(function (e) {
+                    if (e.which == 10 || e.which == 13) {
+                        this.form.submit();
+                    }
+                });
+                $(this).find('input[type=submit]').hide();
+            });
+        });
+    </script>
+    <style>
+        .title-top {
+            line-height: auto;
+        }
+        .title-top h1.main-title {
+            margin: 25px;
+            margin-bottom: 0px;
+            padding: 0px;
+            letter-spacing: 5px;
+            font-size: 60px;
+        }
+        .title-top h2.main-title {
+            font-size: 20px;
+            margin: 25px;
+            margin-top: 0px;
+            padding: 0px;
+            height: 20px;
+            letter-spacing: 3.8px;
+        }
+        header.container {
+            /*            padding-right: 30px;*/
+            padding-top: 10px;
+/*            width: 100%;*/
+            /*            height: 70px;*/
+            /*            position: relative;*/
+            top: 0px;
+            z-index: 101;
+            background: antiquewhite;
+            margin: 0px;
+            max-width: none;
+            border-bottom: 1px solid black;
+        }
+        .behind-search.affix-top .advo-navbar {
+            border-top: none;
+            border-bottom: none;
+        }
+        a.navbar-brand.mobile-only {
+            color: #333;
+            font-weight: 800;
+        }
+        
+        .container.first-c{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .container.second-c{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        div.header-image.img-responsive {
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+<!--
+<div style="background: antiquewhite;">
+    <a href="/150th">
+        <figure class="container"></figure>
+
+    </a>
+</div>
+-->
+
+<body class="container-fluid">
+    <header class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 f-t-links top-line">
+      </div>
+            <div class="title-top col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align: center;">
+                <!-- <figure><img src="/static/magazine/images/seal_banner.jpeg" class = "logo-container" alt="Main Image" ></figure> -->
+                <a class="no-decoration no-underline" href="/">
+                    <h1 class="main-title">LIBELLUM</h1>
+                    <h2 class="main-title">GERMANTOWN FRIENDS</h2>
+                </a>
+            </div>
+<!--            <center>-->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 top-line" style="text-align: center;">
+                    <div class="form-group search-group">
+                        <form type="get" action="/search/" class="search-form" role="search">
+                            <input type="text" name="q" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Search">
+                            <hr class="search-bottom-border">
+                        </form>
+
+                        <ul class="search-form-links list-unstyled" style="text-align:center">
+                            <li>
+                                <a class="no-decoration top-line" href="#">Search</a>
+                                <a class="no-decoration top-line" href="#">Submit</a>
+                                <a class="no-decoration top-line" href="#">Subscribe</a>
+                                <a class="no-decoration top-line" href="#">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+<!--            </center>-->
+        </div>
+
+    </header>
+    <!-- <hr class = "navbar-divider"> -->
+    <div class="container behind-search affix-top" data-spy="affix" data-offset-top="300" data-offset-bottom="0">
+        <nav class="navbar navbar-default  advo-navbar" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" style="padding: 0px; border: 5px solid #404040; border-radius: 15px;" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+<!--                    <i class="icon-collapse icon-2x" width="50px" height="50px">=</i> -->
+                    
+<!--                    <img src="//aboundant.com/wp-content/uploads/2014/11/VisualEditor_-_Icon_-_Menu.svg_.png" width="50px" height="50px">-->
+<!--                    <img src="/pictures/iconmonstr-list-view-icon-blurshadow.png" style="padding:5px;" width="50px" height="50px">-->
+                    <img src="//33.media.tumblr.com/avatar_c2feb0910e1c_128.png" style="padding:0px;border-radius: 10px;" width="50px" height="50px">
+                    <!--
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+-->
+                </button>
+                <a class="navbar-brand mobile-only" style="font-variant: small-caps;text-align: left;" href="/">LIBELLUM <br> germantown friends</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse ">
+                <div class="nav-header"></div>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://theharvardadvocate.com/about">ABOUT</a>
+                    </li>
+                    <li><a href="https://theharvardadvocate.com/essays">ESSAYS</a>
+                    </li>
+                    <li><a href="https://theharvardadvocate.com/art">ART</a>
+                    </li>
+                    <li><a href="https://theharvardadvocate.com/fiction">FICTION</a>
+                    </li>
+                    <li><a href="https://theharvardadvocate.com/poetry">POETRY</a>
+                    </li>
+                    <li><a href="https://theharvardadvocate.com/columns">COLUMNS</a>
+                    </li>
+                    <li><a href="https://theharvardadvocate.com/issues">ISSUES</a>
+                    </li>
+<!--
+                    <li><a href="https://theharvardadvocate.com/issues">SUBMIT</a>
+                    </li>
+                    <li><a href="https://theharvardadvocate.com/issues">SUBSCRIBE</a>
+                    </li>
+-->
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+    </div>
+
+    <div class="container first-c">
+        <a href="https://theharvardadvocate.com/">
+
+        </a>
+        <div style="background-image: url('//theharvardadvocate.com/static/magazine/images/banner_summer2015.jpg')" class="header-image img-responsive" alt="Main Image">
+            <a href="https://theharvardadvocate.com/">
+
+            </a>
+
+        </div>
+
+        <!-- <hr class = "navbar-divider"> -->
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54c2b7196cc0867d" async="async"></script> -->
+
+
+        <main>
+
+
+            <!-- <img src="/static/magazine/images/comm_crop.jpeg" class = "header-image img-responsive" alt="Main Image" > -->
+            <div class="container second-c">
+                <h1 class="header">CURRENT ISSUE: <a href="https://theharvardadvocate.com/issue/fall-2015/"> Fall 2015 </a></h1>
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/art"><h2 class="subheader">ART<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/content/546/" class="no-decoration">
+                            <h4 class="subheader-article-name"> Machines</h4> 
+                        </a>
+
+                        <a href="https://theharvardadvocate.com/contributor/256/Tez_Clark" class="no-decoration">
+                            <h3 class="subheader-article-author"> Tez Clark </h3> 
+                        </a>
+
+
+                        <figure class="resize-image" style="margin:auto;">
+                            <!--pass in art image link HERE-->
+                            <img src="The%20Harvard%20Advocate%20index_files/Machines_1.png" class="img-responsive" alt="Main Image">
+                        </figure>
+
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/features"><h2 class="subheader">FEATURES<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/article/552/wg-sebald" class="no-decoration">
+                            <h4 class="subheader-article-name"> W.G. Sebald: Writing around Destruction</h4> 
+                        </a>
+
+                        <a href="https://theharvardadvocate.com/contributor/240/Bailey_Trela" class="no-decoration">
+                            <h3 class="subheader-article-author"> Bailey Trela </h3> 
+                        </a>
+
+
+                        <p class="article-summary"></p>
+                        <p dir="ltr">I. Destruction and Silence</p>
+                        <p>&nbsp;</p>
+                        <p dir="ltr"><em>The accounts of individual eyewitnesses, therefore, are
+ of only qualified value, and need to be supplemented by what a synoptic
+ and artificial view reveals.</em>
+                        </p>
+                        <p>&nbsp;</p>
+                        <p dir="ltr">In a series of lectures delivered in Zurich in 1997 (and later published in essay form as “Air War and Literature”), the late German novelist W.G. Sebald decries the “curious blindness” to, and willed ignorance of, the truths of destruction that by any logical reckoning should have come to define life in the fractured wasteland of postwar Germany.</p>
+                        <p></p>
+                        <p><a class="read-more" href="https://theharvardadvocate.com/article/552/wg-sebald">Read More</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/notes"><h2 class="subheader">NOTES<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/article/558/editors-note-fall-2015" class="no-decoration">
+                            <h4 class="subheader-article-name"> Editor's Note: Fall 2015</h4> 
+                        </a>
+
+                        <a href="https://theharvardadvocate.com/contributor/236/The_Advocate_Editorial_Board" class="no-decoration">
+                            <h3 class="subheader-article-author"> The Advocate Editorial Board </h3> 
+                        </a>
+
+
+                        <p class="article-summary"></p>
+                        <p><span id="docs-internal-guid-d0b21f76-d091-9476-d11a-437379b63764"><span>Fall finds </span><span>The Harvard Advocate</span><span>
+ floating and spinning in good foliar form: physical injuries abound, 
+new locks and lists are rendered irrelevant by infenestrated revelers, 
+and those prone to suspicion let anxieties take the reigns as winter 
+looms. Still, dizziness marks maturation, and a closer look shows our 
+green chlorophyll acquiring elder hues of red and gold.</span></span>
+                        </p>
+                        <p></p>
+                        <p><a class="read-more" href="https://theharvardadvocate.com/article/558/editors-note-fall-2015">Read More</a>
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/poetry"><h2 class="subheader">POETRY<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/article/556/hear-fell-their-sinew" class="no-decoration">
+                            <h4 class="subheader-article-name"> hear fell their sinew</h4> 
+                        </a>
+
+                        <a href="https://theharvardadvocate.com/contributor/259/Eli_Schleicher" class="no-decoration">
+                            <h3 class="subheader-article-author"> Eli Schleicher </h3> 
+                        </a>
+
+
+                        <p class="article-summary"></p>
+                        <p>&amp; this sŭn birthed another</p>
+                        <p>with tears in her face -</p>
+                        <p>yellowed or gilded or faded or</p>
+                        <p>green - whatever the sun fancied</p>
+                        <p>for his willowed basement matter</p>
+                        <p>&amp; this sŭn watched another</p>
+                        <p>with splinters at his sapling fingers</p>
+                        <p>from the wood in his veins -</p>
+                        <p>usher three men into the church</p>
+                        <p>where his mother wore her veils</p>
+                        <p></p>
+                        <p><a class="read-more" href="https://theharvardadvocate.com/article/556/hear-fell-their-sinew">Read More</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/fiction"><h2 class="subheader">FICTION<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/article/543/birthday-boy" class="no-decoration">
+                            <h4 class="subheader-article-name"> The Birthday Boy</h4> 
+                        </a>
+
+                        <a href="https://theharvardadvocate.com/contributor/255/Robert_Kim" class="no-decoration">
+                            <h3 class="subheader-article-author"> Robert Kim </h3> 
+                        </a>
+
+
+                        <p class="article-summary"></p>
+                        <p><span>Lucy hasn’t been able to 
+get even a word in with her boyfriend Tom and she’s just about had 
+enough, though of course the birthday boy was always going to be the 
+center of attention, birthday aside, what with the moody indigo blazer 
+and the black button down and bolo tie and the fake golden crown to 
+which he’s glued a plastic eyeball where the center jewel ought to be, 
+with his charismatic conversational virtuosity and his sizable mental 
+library of anecdotes and his appetite for attention. Here’s a little bit
+ about Lucy: Lucy’s got those big eyes that turn heads and inspire 
+double-takes, eyes complexly hazel with droplets of jealous green and 
+melancholic blue mixed in those oceanic irides; her aesthetic can best 
+be described as carefully careless, though tonight she’s paid particular
+ attention to the first part, strutting her stuff in her tea-length 
+shimmering dress with a pattern like the night sky and her bold eyeliner
+ decisions; she’s exceptionally pretty but doesn’t feel that way about 
+herself, and because of this she’s got a complicated relationship with 
+compliments and mirrors, to give you a sense of the girl.</span>
+                        </p>
+                        <p></p>
+                        <p><a class="read-more" href="https://theharvardadvocate.com/article/543/birthday-boy">Read More</a>
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/columns"><h2 class="subheader">COLUMNS<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/article/547/citytarget-sees-itself" class="no-decoration">
+                            <h4 class="subheader-article-name"> CityTarget Sees Itself</h4> 
+                        </a>
+
+                        <a href="https://theharvardadvocate.com/contributor/257/Matthew_Browne" class="no-decoration">
+                            <h3 class="subheader-article-author"> Matthew Browne </h3> 
+                        </a>
+
+
+                        <p class="article-summary"></p>
+                        <p>A few short steps from the entrance escalator in Boston’s new CityTarget stands a section called Local Pride. It is filled with t-shirts whose heathery fabric gives an appearance of wear and fade—a style CityTarget calls vintage. They are emblazoned with catchphrases, figures, and logos meant to invoke the spirit of Boston: How Bout Them Apples runs overtop a clover, Capt. Carl Yastrzemski surrounds an image of the beloved Red Sox great taking a swing, faded logos of Cape Cod potato chips and Marshmallow Fluff sit just beneath the chest of two v-necks.</p>
+                        <p>&nbsp;</p>
+                        <p></p>
+                        <p><a class="read-more" href="https://theharvardadvocate.com/article/547/citytarget-sees-itself">Read More</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/blog"><h2 class="subheader">FROM THE BLOG<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
+                            <h4 class="subheader-article-name"> Symposium: DANGER</h4> 
+                        </a>
+
+
+
+                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
+                            <h3 class="subheader-article-author"> Ariana Chaivaranon </h3> 
+                        </a>
+
+
+                        <span style="margin-left:-5px;">,</span>
+
+                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
+                            <h3 class="subheader-article-author"> Owen Ojo </h3> 
+                        </a>
+
+
+                        <span style="margin-left:-5px;">,</span>
+
+                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
+                            <h3 class="subheader-article-author"> Sarah Toomey </h3> 
+                        </a>
+
+
+                        and
+
+                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
+                            <h3 class="subheader-article-author"> Francesca Violich </h3> 
+                        </a>
+
+
+
+                        <!-- How to check if image exists:
+            http://stackoverflow.com/questions/6637168/python-django-templates-and-testing-if-a-variable-is-null-or-empty-string?rq=1
+            http://stackoverflow.com/questions/12507281/determine-empty-template-variable-in-django -->
+
+
+                        <p class="article-summary">In anticipation of the coming DANGER issue, we reintroduce the Symposium—a collection of artistic creation centering on a single topic. This month, Ariana Chaivaranon, Owen Ojo, Francesca Violich, and Sarah Toomey contemplate “Danger.” ONE "Wait" is part of a series of paintings that place figures within a narrative of death. This series, painted on loose canvas, is tacked directly to the wall of the exhibition space, lending a rough immediacy and implying transience. The subjects are dislocated from the time and space they occupy through the use of distinct coloring and paint application between the figure and ground. Both the formal elements and the narrative of the piece play to the disturbance of the viewer. By Ariana Chaivaranon ‘18 TWO I. so i have taken taekwondo, broken a board with one hand the summer going into fourth grade.</p>
+                        <p><a class="read-more" href="https://theharvardadvocate.com/blog/post/symposium-danger">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href="https://theharvardadvocate.com/blog"><h2 class="subheader">FROM THE BLOG<hr class="subheader-border"></h2></a>
+                        <a href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016" class="no-decoration">
+                            <h4 class="subheader-article-name"> BODIES: Solo Exhibition</h4> 
+                        </a>
+
+
+
+                        <a href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016" class="no-decoration">
+                            <h3 class="subheader-article-author"> Lily Scherlis </h3> 
+                        </a>
+
+
+
+                        <!-- How to check if image exists:
+            http://stackoverflow.com/questions/6637168/python-django-templates-and-testing-if-a-variable-is-null-or-empty-string?rq=1
+            http://stackoverflow.com/questions/12507281/determine-empty-template-variable-in-django -->
+
+
+                        <p class="article-summary">For my upcoming show, I have created a piece just for you. It is intimate and personal. When you come to the wing of the museum where I have installed my work, you sheepishly pick up a program and hurry in. There is no one else here. They know this show is for you, and will be kind enough to leave you alone with it. You pass into a great marble atrium. It is cool and grey and smells like wet rocks. Everyone you have ever known is facing you. They are not moving or even breathing, but they are looking at you. Your high school english teacher is looking at you kindly. Your sixth grade crush is looking at you kindly. The kid you babysat a couple times when you needed pocket money in college is looking at you kindly. You duck behind a black curtain into a tiny dark room where a film plays. In the film, your first love is speaking, looking you right in the eye.</p>
+                        <p><a class="read-more" href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016">Read More</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <!--
+                <div class="row">
+                    <div class="col-md-6">
+                        <article>
+                            <a href="https://theharvardadvocate.com/advertise" class="sponsored-link"> Sponsored </a>
+                            <figure class="resize-image" style="margin:auto;">
+                                <a href="https://www.andersonlittle.com/">
+                                    <img src="The%20Harvard%20Advocate%20index_files/andersonlittle.gif" class="img-responsive" alt="Main Image">
+                                </a>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article>
+                            <a href="https://theharvardadvocate.com/advertise" class="sponsored-link"> Sponsored </a>
+                            <figure class="resize-image" style="margin:auto;">
+                                <a href="http://ribbedtee.com/f/undershirt-wearing-guide/">
+                                    <img src="The%20Harvard%20Advocate%20index_files/ribbed_tee_ad.jpg" class="img-responsive" alt="Main Image">
+                                </a>
+                            </figure>
+                            <p class="article-summary">At <a href="http://ribbedtee.com/f/undershirt-wearing-guide/" class=""> RibbedTee.com</a>
+                                it's our focus to help men look &amp; feel great in their clothes, so we've designed a collection of undershirts to meet every guy's needs</p>
+
+                        </article>
+                    </div>
+                </div>-->
+            </div>
+
+
+
+        </main>
+
+        <footer>
+            <!-- <hr class = "navbar-divider"> -->
+            <div class="container">
+                <nav class="navbar navbar-default advo-navbar footer-navbar" role="navigation">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <ul class="nav navbar-nav footer-navbar">
+                        <li> <a href="https://theharvardadvocate.com/advertise">ADVERTISE</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/alumni">ALUMNI</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/contact">CONTACT US</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/comp">COMP</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/submit">SUBMIT</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    COPYRIGHT © THE HARVARD ADVOCATE 2016 | <a href="https://theharvardadvocate.com/admin">LOG IN</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
