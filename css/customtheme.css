@@ -1,0 +1,90 @@
+/*
+body {
+	font-family: Minion Pro Regular;
+  color: #000;
+}
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('../fonts/league_gothic.eot');
+    src: url('../fonts/league_gothic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league_gothic.woff2') format('woff2'),
+         url('../fonts/league_gothic.woff') format('woff'),
+         url('../fonts/league_gothic.ttf') format('truetype'),
+         url('../fonts/league_gothic.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'futura_std';
+	src: url('../fonts/FuturaStd-Book.otf');
+}
+*/
+
+@font-face {
+    font-family: 'League Gothic Condensed';
+    src: url(../font/League-Gothic/LeagueGothic-CondensedRegular.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'League Gothic Regular';
+    src: url(../font/League-Gothic/LeagueGothic-Regular.otf) format("opentype");
+    font-weight: 500;;
+    font-style: normal;
+}
+.alertbannertop {
+    width: 120%;
+    min-height: 84px;
+    position: absolute;
+    display: none;
+    top: 0px;
+}
+.page-title h1.main-title {
+    text-align: center;
+    font-family: 'League Gothic Regular', 'Helvetica Nue', Arial, sans-serif;
+    font-size: 45px;
+    color: black;
+    margin: 25px;
+    letter-spacing: 3px;
+    padding: 0px;
+    margin-bottom:0px;
+}
+.page-title h2.main-title{
+     text-align: center;
+    font-family: 'League Gothic Regular', 'Helvetica Nue', Arial, sans-serif;
+    letter-spacing:1px;
+    font-size:20px;
+    margin:25px;
+    margin-top:0px;
+    padding: 0;
+}
+.no-underline {
+    text-decoration: none;
+}
+.no-underline:hover {
+    text-decoration: none;
+}
+/*
+.main-title {
+    color: black;
+    font-size: 45px;
+    margin: 25px;
+    letter-spacing: 3px;
+}
+*/
+page-title a h1.main-title:hover {
+    text-decoration: none;
+}
+.no-decoration {
+    color: #000;
+    text-decoration: none;
+}
+.no-decoration:hover {
+    color: #000;
+    cursor: pointer;
+}
+/*---------------------------------------------------------------*/
+    font-size: 14px;
+    line-height: 1.428571429;
