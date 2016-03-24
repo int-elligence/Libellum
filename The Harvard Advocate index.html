@@ -16,16 +16,16 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/bootstrap.css">
     <!-- Making Credit Cards look nice -->
-<!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/card.css">-->
+    <!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/card.css">-->
     <!--  Theme -->
     <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/bootstrap-theme.css">
     <!-- Latest JQuery -->
-<!--    <script src="The%20Harvard%20Advocate%20index_files/analytics.js" async=""></script>-->
+    <!--    <script src="The%20Harvard%20Advocate%20index_files/analytics.js" async=""></script>-->
     <script src="The%20Harvard%20Advocate%20index_files/jquery.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="The%20Harvard%20Advocate%20index_files/bootstrap.js"></script>
     <!-- Making Credit Cards look nice -->
-<!--    <script src="The%20Harvard%20Advocate%20index_files/card.js"></script>-->
+    <!--    <script src="The%20Harvard%20Advocate%20index_files/card.js"></script>-->
 
     <!-- Advocate Javascript -->
     <script src="The%20Harvard%20Advocate%20index_files/main.js"></script>
@@ -33,12 +33,13 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
     <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/stylesheet.css">
-<!-- Typeaheadjs -->
-<!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/search_style.css">-->
-    
-<!--    <script src="The%20Harvard%20Advocate%20index_files/typeahead.js"></script>-->
-<!--    <script src="The%20Harvard%20Advocate%20index_files/typeahead_002.js"></script>-->
-<!--    <script src="The%20Harvard%20Advocate%20index_files/bloodhound.js"></script>
+
+    <!-- Typeaheadjs -->
+    <!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/search_style.css">-->
+
+    <!--    <script src="The%20Harvard%20Advocate%20index_files/typeahead.js"></script>-->
+    <!--    <script src="The%20Harvard%20Advocate%20index_files/typeahead_002.js"></script>-->
+    <!--    <script src="The%20Harvard%20Advocate%20index_files/bloodhound.js"></script>
     
 
 <script type="text/javascript">
@@ -108,8 +109,8 @@
         });
     </script>-->
     <style>
-        @media only screen (max-width : 480px){
-            .title-top h1.main-title{
+        @media only screen (max-width: 480px) {
+            .title-top h1.main-title {
                 margin-top: 0px;
             }
         }
@@ -119,7 +120,6 @@
         .title-top h1.main-title {
             margin: 25px;
             margin-bottom: 0px;
-            
             padding: 0px;
             letter-spacing: 5px;
             font-size: 60px;
@@ -135,7 +135,7 @@
         header.container {
             /*            padding-right: 30px;*/
             padding-top: 0px;
-/*            width: 100%;*/
+            /*            width: 100%;*/
             /*            height: 70px;*/
             /*            position: relative;*/
             top: 0px;
@@ -145,6 +145,9 @@
             max-width: none;
             border-bottom: 1px solid black;
         }
+        .behind-search.affix-top .advo-navbar li a {
+            font-size: 16px;
+        }
         .behind-search.affix-top .advo-navbar {
             border-top: none;
             border-bottom: none;
@@ -153,22 +156,20 @@
             color: #333;
             font-weight: 800;
         }
-        
-        .container.first-c{
+        .container.first-c {
             padding-left: 0px;
             padding-right: 0px;
         }
-        .container.second-c{
+        .container.second-c {
             padding-left: 30px;
             padding-right: 30px;
         }
-
         div.header-image.img-responsive {
             border-top: 1px solid black;
             background-image: url('/pictures/modern-classics-banner.jpg');
         }
-        no-margin-padding{
-            margin:0px;
+        no-margin-padding {
+            margin: 0px;
             padding: 0px;
         }
     </style>
@@ -186,7 +187,7 @@
     <header class="container">
         <div class="row">
             <div class="hidden-sm-down no-margin-padding col-xs-12 col-sm-12 col-md-3 col-lg-3 f-t-links top-line">
-      </div>
+            </div>
             <div class="title-top col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align: center;">
                 <!-- <figure><img src="/static/magazine/images/seal_banner.jpeg" class = "logo-container" alt="Main Image" ></figure> -->
                 <a class="no-decoration no-underline" href="/">
@@ -194,25 +195,61 @@
                     <h2 class="main-title">GERMANTOWN FRIENDS</h2>
                 </a>
             </div>
-<!--            <center>-->
-                <div class="hidden-sm-down no-margin-padding col-xs-12 col-sm-12 col-md-3 col-lg-3 top-line" style="text-align: center;">
-                    <!--<div class="form-group search-group">
-                        <form type="get" action="/search/" class="search-form" role="search">
-                            <input type="text" name="q" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Search">
-                            <hr class="search-bottom-border">
-                        </form>
+            <!--            <center>-->
+            <style>
+                input.typeahead {
+                    width: 100%;
+                    /*                    border-radius: 10px;*/
+                    background-color: antiquewhite;
+                    border: none;
+                    color: black;
+                }
+                .search-form-links {
+                    width: 100%;
+                }
+                .form-group.search-group {
+                    width: 100%;
+                }
+                /*
+                @media only screen(max-width: 480px) (min-width: 800px){
+                    .search-form-links li{
+                        width: 30%;
+                        margin: 0px;
+                        padding: 0px;
+                        letter-spacing: 3px;
+                    }
+                }
+*/
+                .search-form-links li a {
+                    padding-left: auto;
+                    padding-right: auto;
+                }
+                @media only screen (min-width: 992px) {
+                    /*col-md-up*/
+                    .margin-add-992 {
+                        margin-top: 20px;
+                        margin-right: 20px;
+                    }
+                }
+            </style>
+            <div class="hidden-sm-down no-margin-padding margin-add-992 col-xs-12 col-sm-12 col-md-3 col-lg-3 top-line" style="text-align: center;">
+                <div class="form-group search-group">
+                    <form type="get" action="/search/" class="search-form" role="search">
+                        <input type="text" name="q" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Search...">
+                        <hr class="search-bottom-border">
+                    </form>
 
-                        <ul class="search-form-links list-unstyled" style="text-align:center">
-                            <li>
-                                <a class="no-decoration top-line" href="#">Search</a>
-                                <a class="no-decoration top-line" href="#">Submit</a>
-                                <a class="no-decoration top-line" href="#">Subscribe</a>
-                                <a class="no-decoration top-line" href="#">Donate</a>
-                            </li>
-                        </ul>
-                    </div>-->
+                    <ul class="search-form-links list-unstyled list-inline" style="text-align:center">
+                        <li><a class="no-decoration top-line" href="#">Submit</a>
+                        </li>
+                        <li><a class="no-decoration top-line" href="#">Subscribe</a>
+                        </li>
+                        <li><a class="no-decoration top-line" href="#">Donate</a>
+                        </li>
+                    </ul>
                 </div>
-<!--            </center>-->
+            </div>
+            <!--            </center>-->
         </div>
 
     </header>
@@ -222,10 +259,10 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" style="padding: 0px; border: 5px solid #404040; border-radius: 15px;" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-<!--                    <i class="icon-collapse icon-2x" width="50px" height="50px">=</i> -->
-                    
-<!--                    <img src="//aboundant.com/wp-content/uploads/2014/11/VisualEditor_-_Icon_-_Menu.svg_.png" width="50px" height="50px">-->
-<!--                    <img src="/pictures/iconmonstr-list-view-icon-blurshadow.png" style="padding:5px;" width="50px" height="50px">-->
+                    <!--                    <i class="icon-collapse icon-2x" width="50px" height="50px">=</i> -->
+
+                    <!--                    <img src="//aboundant.com/wp-content/uploads/2014/11/VisualEditor_-_Icon_-_Menu.svg_.png" width="50px" height="50px">-->
+                    <!--                    <img src="/pictures/iconmonstr-list-view-icon-blurshadow.png" style="padding:5px;" width="50px" height="50px">-->
                     <img src="//33.media.tumblr.com/avatar_c2feb0910e1c_128.png" style="padding:0px;border-radius: 10px;" width="50px" height="50px">
                     <!--
                     <span class="sr-only">Toggle navigation</span>
@@ -239,7 +276,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse ">
-<!--                <div class="nav-header"></div>-->
+                <!--                <div class="nav-header"></div>-->
                 <ul class="nav navbar-nav">
                     <li><a href="https://theharvardadvocate.com/about">ABOUT</a>
                     </li>
@@ -255,7 +292,7 @@
                     </li>
                     <li><a href="https://theharvardadvocate.com/issues">ISSUES</a>
                     </li>
-<!--
+                    <!--
                     <li><a href="https://theharvardadvocate.com/issues">SUBMIT</a>
                     </li>
                     <li><a href="https://theharvardadvocate.com/issues">SUBSCRIBE</a>
@@ -280,10 +317,10 @@
 
         </div>
         <style>
-            .header-bottom-list-li h1{
+            .header-bottom-list-li h1 {
                 margin-top: 0px;
                 padding-top: 30px;
-/*
+                /*
                 padding-left: 0px;
                 padding-right: 0px;
                 margin-left: 0px;
@@ -291,15 +328,22 @@
 */
             }
             .header-bottom-list-ul li.header-bottom-list-li,
-            .subjumbo-row{
+            .subjumbo-row {
                 padding-left: 0px;
                 padding-right: 0px;
             }
-            .subjumbo-h{
-                margin-top:0px;
-                font-size: 18px;
+            .subjumbo-h span {
+                font-variant-caps: titling-caps;
             }
-/*
+            .subjumbo-h {
+                margin-top: 0px;
+                font-size: 18px;
+                font-family: 'EBGaramondSC08R', Minion Pro Regular, Calibri, cursive;
+                /*                color: red;*/
+                text-transform: uppercase;
+                /*                font-variant-caps: petite-caps;*/
+            }
+            /*
             .header-bottom-list-ul li.header-bottom-list-li:last-child{
                 padding-right: 5px;
             }
@@ -308,15 +352,21 @@
             }
 */
         </style>
+
         <div class="row-fluid subjumbo-row col-sm-12">
-            <h3 class="header subjumbo-h no-underline" >providing an extracurricular opportunity for students interested in classical languages, literature, or culture to gain access to the wider world of scholarly and artistic work influenced by the classics
+            <h3 class="header subjumbo-h no-underline" style="">providing an extracurricular opportunity for students interested in classical languages, literature, or culture <span>to gain access to the wider</span> world of scholarly and artistic work influenced by the classics
             </h3>
         </div>
-<!--
-                    <ul class="list-inline header-bottom-list-ul">
-                        <li class="header-bottom-list-li col-xs-12 col-sm-6" ><h1 class="header no-underline" ><a href="https://theharvardadvocate.com/submit">SUBMIT</a></h1></li>
-                        <li class="header-bottom-list-li hidden-xs col-sm-6" ><h1 class="header no-underline" ><a href="https://theharvardadvocate.com/issue/fall-2015/">SUBSCRIBE</a></h1></li>
-                    </ul>    
+
+        <!--
+        <ul class="list-inline header-bottom-list-ul">
+            <li class="header-bottom-list-li col-xs-12 col-sm-6">
+                <h1 class="header no-underline"><a href="https://theharvardadvocate.com/submit">SUBMIT</a></h1>
+            </li>
+            <li class="header-bottom-list-li hidden-xs col-sm-6">
+                <h1 class="header no-underline"><a href="https://theharvardadvocate.com/issue/fall-2015/">SUBSCRIBE</a></h1>
+            </li>
+        </ul>
 -->
 
         <!-- <hr class = "navbar-divider"> -->
@@ -329,11 +379,11 @@
 
             <!-- <img src="/static/magazine/images/comm_crop.jpeg" class = "header-image img-responsive" alt="Main Image" > -->
             <div class="container second-c">
-                
 
 
 
-                <div class="row">
+
+                <div class="row-fluid">
 
                     <div class="col-md-6">
                         <a href="https://theharvardadvocate.com/art"><h2 class="subheader">ART<hr class="subheader-border"></h2></a>
@@ -364,28 +414,70 @@
                         <a href="https://theharvardadvocate.com/contributor/240/Bailey_Trela" class="no-decoration">
                             <h3 class="subheader-article-author"> Bailey Trela </h3> 
                         </a>
-
-
-                        <p class="article-summary"></p>
-                        <p dir="ltr">I. Destruction and Silence</p>
-                        <p>&nbsp;</p>
-                        <p dir="ltr"><em>The accounts of individual eyewitnesses, therefore, are
+                        <style>
+                            .post-text {
+                                overflow-y: hidden;
+                                max-height: 300px;
+                            }
+                            .post-text .foreground-gradient-transparent{
+                                opacity: 0px;
+                                background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,0,255,0) 100px);
+                                position: absolute;
+/*
+                                top: 0px;
+                                left: 0px;
+*/
+                                width: 100%;
+                                height: 100%;
+                                max-height: 300px;
+                                margin: 0px;
+                                padding-left: 0px;
+/*                                z-index: 100000;*/
+                                
+                            }
+                            .read-more{
+                                color: black;
+                                font-family: 'futura_std','EBGaramondSC08R', cursive;
+                                font-weight: 600;
+/*                                font-size: 14px;*/
+                            }
+                            .read-more2{
+                                color: black;
+                                font-family: futura,'EBGaramondSC08R', cursive;
+/*                                font-weight: 600;*/
+/*                                font-size: 14px;*/
+                            }
+                            .read-more:hover,
+                            .read-more2:hover{
+                                text-decoration: none;
+                                text-shadow: 1.5px 1.5px #F3BB2A;
+                            }
+                        </style>
+                        <div class="post-text">
+                            <div class="foreground-gradient-transparent"></div>
+                            <p class="article-summary"></p>
+                            <p dir="ltr">I. Destruction and Silence</p>
+                            <p>&nbsp;</p>
+                            <p dir=""><em>The accounts of individual eyewitnesses, therefore, are
  of only qualified value, and need to be supplemented by what a synoptic
  and artificial view reveals.</em>
-                        </p>
-                        <p>&nbsp;</p>
-                        <p dir="ltr">In a series of lectures delivered in Zurich in 1997 (and later published in essay form as “Air War and Literature”), the late German novelist W.G. Sebald decries the “curious blindness” to, and willed ignorance of, the truths of destruction that by any logical reckoning should have come to define life in the fractured wasteland of postwar Germany.</p>
-                        <p></p>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p dir="ltr">In a series of lectures delivered in Zurich in 1997 (and later published in essay form as “Air War and Literature”), the late German novelist W.G. Sebald decries the “curious blindness” to, and willed ignorance of, the truths of destruction that by any logical reckoning should have come to define life in the fractured wasteland of postwar Germany.</p>
+                            <p></p>
+                        </div>
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/552/wg-sebald">Read More</a>
+                        </p>
+                        <p><a class="read-more2" href="https://theharvardadvocate.com/article/552/wg-sebald">Read More</a>
                         </p>
 
                     </div>
 
-                </div>
+                    <!--                </div>-->
 
 
 
-                <div class="row">
+                    <!--                <div class="row">-->
 
                     <div class="col-md-6">
                         <a href="https://theharvardadvocate.com/notes"><h2 class="subheader">NOTES<hr class="subheader-border"></h2></a>
@@ -442,11 +534,11 @@ green chlorophyll acquiring elder hues of red and gold.</span></span>
 
                     </div>
 
-                </div>
+                    <!--                </div>-->
 
 
 
-                <div class="row">
+                    <!--                <div class="row">-->
 
                     <div class="col-md-6">
                         <a href="https://theharvardadvocate.com/fiction"><h2 class="subheader">FICTION<hr class="subheader-border"></h2></a>
@@ -506,11 +598,11 @@ compliments and mirrors, to give you a sense of the girl.</span>
 
                     </div>
 
-                </div>
+                    <!--                </div>-->
 
 
 
-                <div class="row">
+                    <!--                <div class="row">-->
 
                     <div class="col-md-6">
                         <a href="https://theharvardadvocate.com/blog"><h2 class="subheader">FROM THE BLOG<hr class="subheader-border"></h2></a>

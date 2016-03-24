@@ -28,6 +28,7 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'League Gothic Regular';
     src: url(../font/League-Gothic/LeagueGothic-Regular.otf) format("opentype");

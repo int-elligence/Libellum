@@ -6823,7 +6823,8 @@ td.visible-print {
     .dropdown li a{
       font-size: 95%;
     }
-    ul li a:hover{
+    ul li a:hover,
+    .yellow-shadow:hover{
         text-decoration: none;
         text-shadow: 1.5px 1.5px #F3BB2A;
     }
