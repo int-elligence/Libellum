@@ -225,15 +225,24 @@
                     padding-left: auto;
                     padding-right: auto;
                 }
-                @media only screen (min-width: 992px) {
+                @media only screen and (min-width: 992px) {
                     /*col-md-up*/
                     .margin-add-992 {
-                        margin-top: 20px;
-                        margin-right: 20px;
+                        padding-top: 20px;
+                        padding-right: 30px;
+/*                        width: 80%;*/
+                    }
+                }
+                @media only screen and (min-width: 992px) {
+                    /*col-md-up*/
+                    .margin-add-992 {
+                        padding-top: 20px;
+                        padding-right: 30px;
+/*                        width: 80%;*/
                     }
                 }
             </style>
-            <div class="hidden-sm-down no-margin-padding margin-add-992 col-xs-12 col-sm-12 col-md-3 col-lg-3 top-line" style="text-align: center;">
+            <div class="hidden-sm-down margin-add-992 col-xs-12 col-sm-12 col-md-3 col-lg-3 top-line" style="text-align: center;">
                 <div class="form-group search-group">
                     <form type="get" action="/search/" class="search-form" role="search">
                         <input type="text" name="q" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Search...">
