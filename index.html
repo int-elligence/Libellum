@@ -24,16 +24,18 @@
     <script src="The%20Harvard%20Advocate%20index_files/jquery.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="The%20Harvard%20Advocate%20index_files/bootstrap.js"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
     <!-- Making Credit Cards look nice -->
     <!--    <script src="The%20Harvard%20Advocate%20index_files/card.js"></script>-->
 
     <!-- Advocate Javascript -->
-    <script src="The%20Harvard%20Advocate%20index_files/main.js"></script>
+<!--    <script src="The%20Harvard%20Advocate%20index_files/main.js"></script>-->
+    
     <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
     <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/stylesheet.css">
-
+    <script src="js/scratch.js"></script>
     <!-- Typeaheadjs -->
     <!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/search_style.css">-->
 
@@ -41,7 +43,7 @@
     <!--    <script src="The%20Harvard%20Advocate%20index_files/typeahead_002.js"></script>-->
     <!--    <script src="The%20Harvard%20Advocate%20index_files/bloodhound.js"></script>
     
-
+    
 <script type="text/javascript">
         $(document).ready(function () {
             var authors = new Bloodhound({
@@ -230,7 +232,7 @@
                     .margin-add-992 {
                         padding-top: 20px;
                         padding-right: 30px;
-/*                        width: 80%;*/
+                        /*                        width: 80%;*/
                     }
                 }
                 @media only screen and (min-width: 992px) {
@@ -238,7 +240,16 @@
                     .margin-add-992 {
                         padding-top: 20px;
                         padding-right: 30px;
-/*                        width: 80%;*/
+                        /*                        width: 80%;*/
+                    }
+                }
+                @media only screen and (max-width: 400px){
+                    hr.search-bottom-border{
+                        border: none;
+                        visibility: hidden;
+                    }
+                    input.tt-query{
+                        border-bottom: 1px solid black;
                     }
                 }
             </style>
@@ -393,16 +404,12 @@
 
 
 
-                <div class="row-fluid">
+                <div class="row-fluid grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".post-js", "percentPosition": true }'>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post post-js grid-item">
                         <a href="https://theharvardadvocate.com/art"><h2 class="subheader">ART<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/content/546/" class="no-decoration">
-                            <h4 class="subheader-article-name"> Machines</h4> 
-                        </a>
-
-                        <a href="https://theharvardadvocate.com/contributor/256/Tez_Clark" class="no-decoration">
-                            <h3 class="subheader-article-author"> Tez Clark </h3> 
+                            <h4 class="subheader-article-name"> Machines by Tez Clark</h4> 
                         </a>
 
 
@@ -415,25 +422,21 @@
 
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post grid-item">
                         <a href="https://theharvardadvocate.com/features"><h2 class="subheader">FEATURES<hr class="subheader-border"></h2></a>
-                        <a href="https://theharvardadvocate.com/article/552/wg-sebald" class="no-decoration">
-                            <h4 class="subheader-article-name"> W.G. Sebald: Writing around Destruction</h4> 
-                        </a>
-
-                        <a href="https://theharvardadvocate.com/contributor/240/Bailey_Trela" class="no-decoration">
-                            <h3 class="subheader-article-author"> Bailey Trela </h3> 
+                        <a href="#post-link" class="no-decoration">
+                            <h4 class="subheader-article-name"> W.G. Sebald: Writing around Destruction by Bailey Trela </h4> 
                         </a>
                         <style>
                             .post-text {
                                 overflow-y: hidden;
-                                max-height: 300px;
+                                /*                                max-height: 300px;*/
                             }
-                            .post-text .foreground-gradient-transparent{
+                            .post-text .foreground-gradient-transparent {
                                 opacity: 0px;
-                                background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,0,255,0) 100px);
+                                background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 0, 255, 0) 100px);
                                 position: absolute;
-/*
+                                /*
                                 top: 0px;
                                 left: 0px;
 */
@@ -442,29 +445,70 @@
                                 max-height: 300px;
                                 margin: 0px;
                                 padding-left: 0px;
-/*                                z-index: 100000;*/
-                                
+                                /*                                z-index: 100000;*/
                             }
-                            .read-more{
+                            .read-more {
                                 color: black;
-                                font-family: 'futura_std','EBGaramondSC08R', cursive;
-                                font-weight: 600;
-/*                                font-size: 14px;*/
+                                font-family: 'futura_std', 'EBGaramondSC08R', cursive;
+                                font-weight: 300 !important;
+/*                                font-size: 12px;*/
+                                color: #777;
+                                font-size: 12px;
                             }
-                            .read-more2{
+                            .read-more2 {
                                 color: black;
-                                font-family: futura,'EBGaramondSC08R', cursive;
-/*                                font-weight: 600;*/
-/*                                font-size: 14px;*/
+                                font-family: futura, 'EBGaramondSC08R', cursive;
+                                /*                                font-weight: 600;*/
+                                /*                                font-size: 14px;*/
+                            }
+                            .read-more:focus,
+                            .read-more:visited{
+                                font-weight: bolder!important;
+                                color: #7e609f;
+/*                                text-shadow: none;*/
+/*                                1.5px 1.5px #F3BB2A;*/
                             }
                             .read-more:hover,
-                            .read-more2:hover{
-                                text-decoration: none;
-                                text-shadow: 1.5px 1.5px #F3BB2A;
+                            .read-more2:hover {
+                                color: #000;
+                                text-decoration: underline;
+/*                                text-shadow: 1.5px 1.5px #eee;*/
+/*                                    f8e7cb;*/
+/*                                    F3BB2A;*/
                             }
+/*
+                            h2.subheader:hover{
+                                text-decoration: none!important;
+                                
+                            }
+*/
+                             
+/*                            h3.subheader-article-author*/
+/*                            h3.subheader-article-author:visited,*/
+/*                            h3.subheader-article-author:focus*/
+/*
+                            a.no-decoration:hover
+                            {
+                                text-decoration: none !important;
+                                font-variant: normal;
+                                border-bottom: none;
+                                color: greenyellow;
+                            }
+                            h4.subheader-article-name:hover{
+                                text-decoration: none;
+                                cursor: ew-resize;
+                                border-bottom: 2px solid #ff0;
+                            }
+                            h3.subheader-article-author:hover{
+                                text-decoration: none;
+                                cursor: all-scroll;
+                                z-index: 60000;
+                                border-bottom: 2px solid #fff;
+                            }
+*/
                         </style>
                         <div class="post-text">
-                            <div class="foreground-gradient-transparent"></div>
+                            <!--                            <div class="foreground-gradient-transparent"></div>-->
                             <p class="article-summary"></p>
                             <p dir="ltr">I. Destruction and Silence</p>
                             <p>&nbsp;</p>
@@ -478,8 +522,10 @@
                         </div>
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/552/wg-sebald">Read More</a>
                         </p>
+                        <!--
                         <p><a class="read-more2" href="https://theharvardadvocate.com/article/552/wg-sebald">Read More</a>
                         </p>
+-->
 
                     </div>
 
@@ -489,14 +535,10 @@
 
                     <!--                <div class="row">-->
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post-js post grid-item">
                         <a href="https://theharvardadvocate.com/notes"><h2 class="subheader">NOTES<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/558/editors-note-fall-2015" class="no-decoration">
-                            <h4 class="subheader-article-name"> Editor's Note: Fall 2015</h4> 
-                        </a>
-
-                        <a href="https://theharvardadvocate.com/contributor/236/The_Advocate_Editorial_Board" class="no-decoration">
-                            <h3 class="subheader-article-author"> The Advocate Editorial Board </h3> 
+                            <h4 class="subheader-article-name"> Editor's Note: Fall 2015 by The Advocate Editorial Board </h4> 
                         </a>
 
 
@@ -516,14 +558,10 @@ green chlorophyll acquiring elder hues of red and gold.</span></span>
 
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post grid-item post-js">
                         <a href="https://theharvardadvocate.com/poetry"><h2 class="subheader">POETRY<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/556/hear-fell-their-sinew" class="no-decoration">
-                            <h4 class="subheader-article-name"> hear fell their sinew</h4> 
-                        </a>
-
-                        <a href="https://theharvardadvocate.com/contributor/259/Eli_Schleicher" class="no-decoration">
-                            <h3 class="subheader-article-author"> Eli Schleicher </h3> 
+                            <h4 class="subheader-article-name"> hear fell their sinew by Eli Schleicher </h4> 
                         </a>
 
 
@@ -550,14 +588,10 @@ green chlorophyll acquiring elder hues of red and gold.</span></span>
 
                     <!--                <div class="row">-->
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post grid-item post-js">
                         <a href="https://theharvardadvocate.com/fiction"><h2 class="subheader">FICTION<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/543/birthday-boy" class="no-decoration">
-                            <h4 class="subheader-article-name"> The Birthday Boy</h4> 
-                        </a>
-
-                        <a href="https://theharvardadvocate.com/contributor/255/Robert_Kim" class="no-decoration">
-                            <h3 class="subheader-article-author"> Robert Kim </h3> 
+                            <h4 class="subheader-article-name"> The Birthday Boy by Robert Kim </h4> 
                         </a>
 
 
@@ -580,7 +614,8 @@ shimmering dress with a pattern like the night sky and her bold eyeliner
 herself, and because of this she’s got a complicated relationship with 
 compliments and mirrors, to give you a sense of the girl.</span>
                         </p>
-                        <p></p>
+                        <p>1132 characters above</p>
+<!--                        make javacript that cuts of at 3 char before 1129 and end with '...' only on index-->
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/543/birthday-boy">Read More</a>
                         </p>
 
@@ -588,14 +623,10 @@ compliments and mirrors, to give you a sense of the girl.</span>
 
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post grid-item post-js">
                         <a href="https://theharvardadvocate.com/columns"><h2 class="subheader">COLUMNS<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/547/citytarget-sees-itself" class="no-decoration">
-                            <h4 class="subheader-article-name"> CityTarget Sees Itself</h4> 
-                        </a>
-
-                        <a href="https://theharvardadvocate.com/contributor/257/Matthew_Browne" class="no-decoration">
-                            <h3 class="subheader-article-author"> Matthew Browne </h3> 
+                            <h4 class="subheader-article-name"> CityTarget Sees Itself by Matthew Browne </h4> 
                         </a>
 
 
@@ -614,37 +645,10 @@ compliments and mirrors, to give you a sense of the girl.</span>
 
                     <!--                <div class="row">-->
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post grid-item post-js">
                         <a href="https://theharvardadvocate.com/blog"><h2 class="subheader">FROM THE BLOG<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
-                            <h4 class="subheader-article-name"> Symposium: DANGER</h4> 
-                        </a>
-
-
-
-                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
-                            <h3 class="subheader-article-author"> Ariana Chaivaranon </h3> 
-                        </a>
-
-
-                        <span style="margin-left:-5px;">,</span>
-
-                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
-                            <h3 class="subheader-article-author"> Owen Ojo </h3> 
-                        </a>
-
-
-                        <span style="margin-left:-5px;">,</span>
-
-                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
-                            <h3 class="subheader-article-author"> Sarah Toomey </h3> 
-                        </a>
-
-
-                        and
-
-                        <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
-                            <h3 class="subheader-article-author"> Francesca Violich </h3> 
+                            <h4 class="subheader-article-name"> Symposium: DANGER by Ariana Chaivaranon, Owen Ojo, Sarah Toomey, and Francesca Violich </h4> 
                         </a>
 
 
@@ -655,20 +659,14 @@ compliments and mirrors, to give you a sense of the girl.</span>
 
 
                         <p class="article-summary">In anticipation of the coming DANGER issue, we reintroduce the Symposium—a collection of artistic creation centering on a single topic. This month, Ariana Chaivaranon, Owen Ojo, Francesca Violich, and Sarah Toomey contemplate “Danger.” ONE "Wait" is part of a series of paintings that place figures within a narrative of death. This series, painted on loose canvas, is tacked directly to the wall of the exhibition space, lending a rough immediacy and implying transience. The subjects are dislocated from the time and space they occupy through the use of distinct coloring and paint application between the figure and ground. Both the formal elements and the narrative of the piece play to the disturbance of the viewer. By Ariana Chaivaranon ‘18 TWO I. so i have taken taekwondo, broken a board with one hand the summer going into fourth grade.</p>
-                        <p><a class="read-more" href="https://theharvardadvocate.com/blog/post/symposium-danger">Read More</a>
+                        <p><a class="read-more" href="#">Read More</a>
                         </p>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 post grid-item post-js">
                         <a href="https://theharvardadvocate.com/blog"><h2 class="subheader">FROM THE BLOG<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016" class="no-decoration">
-                            <h4 class="subheader-article-name"> BODIES: Solo Exhibition</h4> 
-                        </a>
-
-
-
-                        <a href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016" class="no-decoration">
-                            <h3 class="subheader-article-author"> Lily Scherlis </h3> 
+                            <h4 class="subheader-article-name"> BODIES: Solo Exhibition by Lily Scherlis </h4> 
                         </a>
 
 
@@ -682,7 +680,7 @@ compliments and mirrors, to give you a sense of the girl.</span>
                         <p><a class="read-more" href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016">Read More</a>
                         </p>
                     </div>
-
+<!--end of row fluid-->
                 </div>
 
                 <!--
@@ -736,7 +734,8 @@ compliments and mirrors, to give you a sense of the girl.</span>
                     </ul>
                 </nav>
                 <div class="copyright">
-                    COPYRIGHT © LIBELLUM by GERMANTOWN FRIENDS SCHOOL <!--| <a href="https://theharvardadvocate.com/admin">LOG IN</a>-->
+                    COPYRIGHT © LIBELLUM by GERMANTOWN FRIENDS SCHOOL
+                    <!--| <a href="https://theharvardadvocate.com/admin">LOG IN</a>-->
                 </div>
             </div>
         </footer>
