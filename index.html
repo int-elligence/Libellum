@@ -29,8 +29,8 @@
     <!--    <script src="The%20Harvard%20Advocate%20index_files/card.js"></script>-->
 
     <!-- Advocate Javascript -->
-<!--    <script src="The%20Harvard%20Advocate%20index_files/main.js"></script>-->
-    
+    <!--    <script src="The%20Harvard%20Advocate%20index_files/main.js"></script>-->
+
     <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -111,11 +111,13 @@
         });
     </script>-->
     <style>
-        @media only screen (max-width: 480px) {
+        /*
+        @media only screen and (max-width: 480px) {
             .title-top h1.main-title {
                 margin-top: 0px;
             }
         }
+*/
         .title-top {
             line-height: auto;
         }
@@ -157,6 +159,9 @@
         a.navbar-brand.mobile-only {
             color: #333;
             font-weight: 800;
+            padding-left: 15px;
+            /*            padding-bottom: 0px;*/
+            /*            margin-bottom: 0px;*/
         }
         .container.first-c {
             padding-left: 0px;
@@ -243,12 +248,12 @@
                         /*                        width: 80%;*/
                     }
                 }
-                @media only screen and (max-width: 400px){
-                    hr.search-bottom-border{
+                @media only screen and (max-width: 400px) {
+                    hr.search-bottom-border {
                         border: none;
                         visibility: hidden;
                     }
-                    input.tt-query{
+                    input.tt-query {
                         border-bottom: 1px solid black;
                     }
                 }
@@ -358,11 +363,36 @@
             }
             .subjumbo-h {
                 margin-top: 0px;
-                font-size: 18px;
+                font-size: 1em;
+                letter-spacing: .5px;
                 font-family: 'EBGaramondSC08R', Minion Pro Regular, Calibri, cursive;
                 /*                color: red;*/
                 text-transform: uppercase;
+                transition: all .2s linear;
                 /*                font-variant-caps: petite-caps;*/
+            }
+            @media only screen and (min-width: 899px) and (max-width: 1212px){
+                .subjumbo-row h3.header.subjumbo-h {
+                    font-size: 16.5px;
+                    font-size: 1.5vw;
+                    /*                    color: aqua;*/
+                }
+                .subjumbo-row h3.header.subjumbo-h span {
+/*                    font-size: 14px;*/
+                }
+                /*
+                .row-fluid{
+                    background-color: aqua;
+                }
+*/
+            }
+            @media only screen and (min-width: 1213px) {
+                .subjumbo-row h3.header.subjumbo-h {
+                    font-size: 18.195px;
+                }
+                .subjumbo-row h3.header.subjumbo-h span {
+/*                    font-size: 14px;*/
+                }
             }
             /*
             .header-bottom-list-ul li.header-bottom-list-li:last-child{
@@ -375,7 +405,12 @@
         </style>
 
         <div class="row-fluid subjumbo-row col-sm-12">
-            <h3 class="header subjumbo-h no-underline" style="">providing an extracurricular opportunity for students interested in classical languages, literature, or culture <span>to gain access to the wider</span> world of scholarly and artistic work influenced by the classics
+            <h3 class="header subjumbo-h no-underline">
+<!--                εἰδέναι μὲν μηδὲν πλὴν αὐτὸ τοῦτο-->
+<!--                Hekastos allotrioi barbaros esti-->
+<!--                From the delicate strands,<br>between minds we weave our mesh:<br>a blanket to warm the soul.-->
+<!--                providing <em>a</em>n extr<em>a</em>curricul<em>a</em>r opportunity for students interested in cl<em>a</em>ssic<em>a</em>l l<em>a</em>ngu<em>a</em>ges, liter<em>a</em>ture, or culture to g<em>a</em>in <em>a</em>ccess to the wider world of schol<em>a</em>rly and <em>a</em>rtistic work influenced by the cl<em>a</em>ssics-->
+                providing an extracurricular opportunity for students interested in classical <span>languages, literature, or culture to gain</span> access to the wider world of scholarly and artistic work influenced by the classics
             </h3>
         </div>
 
@@ -393,7 +428,130 @@
         <!-- <hr class = "navbar-divider"> -->
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54c2b7196cc0867d" async="async"></script> -->
+        <style>
+            .grid-item {
+                display: block;
+                left: auto;
+            }
+            .grid-item:nth-child(odd) {
+/*                background-color: rgba(0, 255, 255, .7);*/
+/*                opacity: .9;*/
+            }
+            .grid-item:nth-child(even) {
+/*                background-color: rgba(255, 0, 0, .7);*/
+/*                opacity: .9;*/
+            }
+            /*
+            @media only screen and (min-width:540px){
+                .grid-item{
+                    background-color: yellow !important;
+                    opacity: 1 !important;
+                }
+            }
+*/
+            @media only screen and (min-width: 899px) {
+                .grid-item {
+                    width: 50%;
+                    margin: 0px;
+                    /*                    left: auto;*/
+                    /*                    background-color: #000 !important;*/
+                }
+            }
+            @media only screen and (max-width: 898px) {
+                .grid-item {
+                    width: 100%;
+                    text-align: center;
+                    padding-left: auto;
+                    padding-right: auto;
+                    /*                    left: auto;*/
+                }
+            }
+        </style>
+        <style>
+            /*
+            .post-text {
+                overflow-y: hidden;
+                                                max-height: 300px;
+            }
+*/
+            /*
+            .post-text .foreground-gradient-transparent {
+                opacity: 0px;
+                background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 0, 255, 0) 100px);
+                position: absolute;
+                
+*/
+            /*
+                                top: 0px;
+                                left: 0px;
 
+                width: 100%;
+                height: 100%;
+                max-height: 300px;
+                margin: 0px;
+                padding-left: 0px;
+                                                z-index: 100000;
+            }
+*/
+            .read-more {
+                color: black;
+                font-family: 'futura_std', 'EBGaramondSC08R', cursive;
+                font-weight: 300 !important;
+                /*                                font-size: 12px;*/
+                color: #777;
+                font-size: 12px;
+            }
+            .read-more2 {
+                color: black;
+                font-family: futura, 'EBGaramondSC08R', cursive;
+                /*                                font-weight: 600;*/
+                /*                                font-size: 14px;*/
+            }
+            .read-more:focus,
+            .read-more:visited {
+                font-weight: bolder!important;
+                color: #7e609f;
+                /*                                text-shadow: none;*/
+                /*                                1.5px 1.5px #F3BB2A;*/
+            }
+            .read-more:hover,
+            .read-more2:hover {
+                color: #000;
+                text-decoration: underline;
+                /*                                text-shadow: 1.5px 1.5px #eee;*/
+                /*                                    f8e7cb;*/
+                /*                                    F3BB2A;*/
+            }
+            /*
+                            h2.subheader:hover{
+                                text-decoration: none!important;
+                                
+                            }
+*/
+            /*                            h3.subheader-article-author*/
+            /*                            h3.subheader-article-author:visited,*/
+            /*                            h3.subheader-article-author:focus*/
+            /*
+                            a.no-decoration:hover
+                            {
+                                text-decoration: none !important;
+                                font-variant: normal;
+                                border-bottom: none;
+                                color: greenyellow;
+                            }
+                            h4.subheader-article-name:hover{
+                                text-decoration: none;
+                                cursor: ew-resize;
+                                border-bottom: 2px solid #ff0;
+                            }
+                            h3.subheader-article-author:hover{
+                                text-decoration: none;
+                                cursor: all-scroll;
+                                z-index: 60000;
+                                border-bottom: 2px solid #fff;
+                            }
+*/
+        </style>
 
         <main>
 
@@ -404,7 +562,9 @@
 
 
 
-                <div class="row-fluid grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".post-js", "percentPosition": true }'>
+                <!--                <div class="row-fluid grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": "490"'>-->
+                <div class="row grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".post-js", "percentPosition": true}'>
+                    <!--                <div class="row-fluid grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".post-js", "percentPosition": true, "gutter": 10}'>-->
 
                     <div class="col-md-6 post post-js grid-item">
                         <a href="https://theharvardadvocate.com/art"><h2 class="subheader">ART<hr class="subheader-border"></h2></a>
@@ -427,86 +587,6 @@
                         <a href="#post-link" class="no-decoration">
                             <h4 class="subheader-article-name"> W.G. Sebald: Writing around Destruction by Bailey Trela </h4> 
                         </a>
-                        <style>
-                            .post-text {
-                                overflow-y: hidden;
-                                /*                                max-height: 300px;*/
-                            }
-                            .post-text .foreground-gradient-transparent {
-                                opacity: 0px;
-                                background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 0, 255, 0) 100px);
-                                position: absolute;
-                                /*
-                                top: 0px;
-                                left: 0px;
-*/
-                                width: 100%;
-                                height: 100%;
-                                max-height: 300px;
-                                margin: 0px;
-                                padding-left: 0px;
-                                /*                                z-index: 100000;*/
-                            }
-                            .read-more {
-                                color: black;
-                                font-family: 'futura_std', 'EBGaramondSC08R', cursive;
-                                font-weight: 300 !important;
-/*                                font-size: 12px;*/
-                                color: #777;
-                                font-size: 12px;
-                            }
-                            .read-more2 {
-                                color: black;
-                                font-family: futura, 'EBGaramondSC08R', cursive;
-                                /*                                font-weight: 600;*/
-                                /*                                font-size: 14px;*/
-                            }
-                            .read-more:focus,
-                            .read-more:visited{
-                                font-weight: bolder!important;
-                                color: #7e609f;
-/*                                text-shadow: none;*/
-/*                                1.5px 1.5px #F3BB2A;*/
-                            }
-                            .read-more:hover,
-                            .read-more2:hover {
-                                color: #000;
-                                text-decoration: underline;
-/*                                text-shadow: 1.5px 1.5px #eee;*/
-/*                                    f8e7cb;*/
-/*                                    F3BB2A;*/
-                            }
-/*
-                            h2.subheader:hover{
-                                text-decoration: none!important;
-                                
-                            }
-*/
-                             
-/*                            h3.subheader-article-author*/
-/*                            h3.subheader-article-author:visited,*/
-/*                            h3.subheader-article-author:focus*/
-/*
-                            a.no-decoration:hover
-                            {
-                                text-decoration: none !important;
-                                font-variant: normal;
-                                border-bottom: none;
-                                color: greenyellow;
-                            }
-                            h4.subheader-article-name:hover{
-                                text-decoration: none;
-                                cursor: ew-resize;
-                                border-bottom: 2px solid #ff0;
-                            }
-                            h3.subheader-article-author:hover{
-                                text-decoration: none;
-                                cursor: all-scroll;
-                                z-index: 60000;
-                                border-bottom: 2px solid #fff;
-                            }
-*/
-                        </style>
                         <div class="post-text">
                             <!--                            <div class="foreground-gradient-transparent"></div>-->
                             <p class="article-summary"></p>
@@ -615,7 +695,7 @@ herself, and because of this she’s got a complicated relationship with
 compliments and mirrors, to give you a sense of the girl.</span>
                         </p>
                         <p>1132 characters above</p>
-<!--                        make javacript that cuts of at 3 char before 1129 and end with '...' only on index-->
+                        <!--                        make javacript that cuts of at 3 char before 1129 and end with '...' only on index-->
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/543/birthday-boy">Read More</a>
                         </p>
 
@@ -680,7 +760,7 @@ compliments and mirrors, to give you a sense of the girl.</span>
                         <p><a class="read-more" href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016">Read More</a>
                         </p>
                     </div>
-<!--end of row fluid-->
+                    <!--end of row fluid-->
                 </div>
 
                 <!--
@@ -718,8 +798,9 @@ compliments and mirrors, to give you a sense of the girl.</span>
         <footer>
             <!-- <hr class = "navbar-divider"> -->
             <div class="container">
+                <!--
                 <nav class="navbar navbar-default advo-navbar footer-navbar" role="navigation">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
+                     Collect the nav links, forms, and other content for toggling 
                     <ul class="nav navbar-nav footer-navbar">
                         <li> <a href="https://theharvardadvocate.com/news">NEWS</a>
                         </li>
@@ -733,6 +814,27 @@ compliments and mirrors, to give you a sense of the girl.</span>
                         </li>
                     </ul>
                 </nav>
+-->
+                <div class="copyright" style="display:none;visibility:hidden;">
+                    COPYRIGHT © LIBELLUM by GERMANTOWN FRIENDS SCHOOL
+                    <!--| <a href="https://theharvardadvocate.com/admin">LOG IN</a>-->
+                </div>
+                <nav class="navbar navbar-default advo-navbar footer-navbar" role="navigation">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <ul class="nav navbar-nav footer-navbar">
+                        <li> <a href="https://theharvardadvocate.com/news">NEWS</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/alumni">LOG IN</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/contact">CONTACT US</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/comp">MEETINGS</a>
+                        </li>
+                        <li><a href="https://theharvardadvocate.com/submit">SUBMIT</a>
+                        </li>
+                    </ul>
+                </nav>
+
                 <div class="copyright">
                     COPYRIGHT © LIBELLUM by GERMANTOWN FRIENDS SCHOOL
                     <!--| <a href="https://theharvardadvocate.com/admin">LOG IN</a>-->
