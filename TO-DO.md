@@ -7,3 +7,4 @@ to-do:
                         <!-- How to check if image exists:
             http://stackoverflow.com/questions/6637168/python-django-templates-and-testing-if-a-variable-is-null-or-empty-string?rq=1
             http://stackoverflow.com/questions/12507281/determine-empty-template-variable-in-django -->
+    line 541 fix css
