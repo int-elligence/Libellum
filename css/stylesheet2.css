@@ -61,7 +61,7 @@
         div.header-image.img-responsive {
             border-top: 1px solid black;
             border-bottom: 1px solid black;
-            background-image: url('pictures/libellum-banner.png');
+            background-image: url('../pictures/libellum-banner.png');
         }
         no-margin-padding {
             margin: 0px;
