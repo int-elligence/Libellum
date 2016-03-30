@@ -36,6 +36,14 @@
   <![endif]-->
     <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/stylesheet.css">
     <script src="js/scratch.js"></script>
+    <!--    only on index block start-->
+    <script src="js/paragraph_limit.js"></script>
+    <!--only on index block end-->
+
+
+
+
+
     <!-- Typeaheadjs -->
     <!--    <link rel="stylesheet" href="The%20Harvard%20Advocate%20index_files/search_style.css">-->
 
@@ -371,14 +379,14 @@
                 transition: all .2s linear;
                 /*                font-variant-caps: petite-caps;*/
             }
-            @media only screen and (min-width: 899px) and (max-width: 1212px){
+            @media only screen and (min-width: 899px) and (max-width: 1212px) {
                 .subjumbo-row h3.header.subjumbo-h {
                     font-size: 16.5px;
                     font-size: 1.5vw;
                     /*                    color: aqua;*/
                 }
                 .subjumbo-row h3.header.subjumbo-h span {
-/*                    font-size: 14px;*/
+                    /*                    font-size: 14px;*/
                 }
                 /*
                 .row-fluid{
@@ -391,7 +399,7 @@
                     font-size: 18.195px;
                 }
                 .subjumbo-row h3.header.subjumbo-h span {
-/*                    font-size: 14px;*/
+                    /*                    font-size: 14px;*/
                 }
             }
             /*
@@ -432,14 +440,21 @@
             .grid-item {
                 display: block;
                 left: auto;
+                text-align: center;
+            }
+            .grid-item p {
+                text-align: left;
+            }
+            .grid-item:nth-child(odd) p {
+                /*                text-align: right;*/
             }
             .grid-item:nth-child(odd) {
-/*                background-color: rgba(0, 255, 255, .7);*/
-/*                opacity: .9;*/
+                /*                background-color: rgba(0, 255, 255, .7);*/
+                /*                opacity: .9;*/
             }
             .grid-item:nth-child(even) {
-/*                background-color: rgba(255, 0, 0, .7);*/
-/*                opacity: .9;*/
+                /*                background-color: rgba(255, 0, 0, .7);*/
+                /*                opacity: .9;*/
             }
             /*
             @media only screen and (min-width:540px){
@@ -566,7 +581,7 @@
                 <div class="row grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".post-js", "percentPosition": true}'>
                     <!--                <div class="row-fluid grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".post-js", "percentPosition": true, "gutter": 10}'>-->
 
-                    <div class="col-md-6 post post-js grid-item">
+                    <div class="col-md-6 post image-post post-js grid-item">
                         <a href="https://theharvardadvocate.com/art"><h2 class="subheader">ART<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/content/546/" class="no-decoration">
                             <h4 class="subheader-article-name"> Machines by Tez Clark</h4> 
@@ -577,36 +592,28 @@
                             <!--pass in art image link HERE-->
                             <img src="The%20Harvard%20Advocate%20index_files/Machines_1.png" class="img-responsive" alt="Main Image">
                         </figure>
-
+                        <p>In a series of lectures delivered in Zurich in 1997 (and later published in essay form as “Air War and Literature”), the late German novelist W.G. Sebald decries the “curious blindness” to, and willed ignorance of, the truths of destruction that by any logical reckoning should have come to define life in the frac</p>
                     </div>
 
 
 
-                    <div class="col-md-6 post grid-item">
+                    <div class="col-md-6 post text-post grid-item">
                         <a href="https://theharvardadvocate.com/features"><h2 class="subheader">FEATURES<hr class="subheader-border"></h2></a>
                         <a href="#post-link" class="no-decoration">
                             <h4 class="subheader-article-name"> W.G. Sebald: Writing around Destruction by Bailey Trela </h4> 
                         </a>
                         <div class="post-text">
-                            <!--                            <div class="foreground-gradient-transparent"></div>-->
-                            <p class="article-summary"></p>
-                            <p dir="ltr">I. Destruction and Silence</p>
-                            <p>&nbsp;</p>
-                            <p dir=""><em>The accounts of individual eyewitnesses, therefore, are
+
+                            <p dir="ltr" class="article-text">I. Destruction and Silence
+                                <br><em>The accounts of individual eyewitnesses, therefore, are
  of only qualified value, and need to be supplemented by what a synoptic
  and artificial view reveals.</em>
+                                <br>In a series of lectures delivered in Zurich in 1997 (and later published in essay form as “Air War and Literature”), the late German novelist W.G. Sebald decries the “curious blindness” to, and willed ignorance of, the truths of destruction that by any logical reckoning should have come to define life in the fractured wasteland of postwar Germany.
+                                <br>
                             </p>
-                            <p>&nbsp;</p>
-                            <p dir="ltr">In a series of lectures delivered in Zurich in 1997 (and later published in essay form as “Air War and Literature”), the late German novelist W.G. Sebald decries the “curious blindness” to, and willed ignorance of, the truths of destruction that by any logical reckoning should have come to define life in the fractured wasteland of postwar Germany.</p>
-                            <p></p>
                         </div>
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/552/wg-sebald">Read More</a>
                         </p>
-                        <!--
-                        <p><a class="read-more2" href="https://theharvardadvocate.com/article/552/wg-sebald">Read More</a>
-                        </p>
--->
-
                     </div>
 
                     <!--                </div>-->
@@ -615,22 +622,19 @@
 
                     <!--                <div class="row">-->
 
-                    <div class="col-md-6 post-js post grid-item">
+                    <div class="col-md-6 text-post post-js post grid-item">
                         <a href="https://theharvardadvocate.com/notes"><h2 class="subheader">NOTES<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/558/editors-note-fall-2015" class="no-decoration">
                             <h4 class="subheader-article-name"> Editor's Note: Fall 2015 by The Advocate Editorial Board </h4> 
                         </a>
 
 
-                        <p class="article-summary"></p>
-                        <p><span id="docs-internal-guid-d0b21f76-d091-9476-d11a-437379b63764"><span>Fall finds </span><span>The Harvard Advocate</span><span>
- floating and spinning in good foliar form: physical injuries abound, 
-new locks and lists are rendered irrelevant by infenestrated revelers, 
-and those prone to suspicion let anxieties take the reigns as winter 
-looms. Still, dizziness marks maturation, and a closer look shows our 
-green chlorophyll acquiring elder hues of red and gold.</span></span>
-                        </p>
-                        <p></p>
+                        <div class="post-text">
+                            <p class="article-text">Okay here we are floating and spinning in good foliar form: physical injuries abound, new locks and lists are rendered irrelevant by infenestrated revelers, and those prone to suspicion let anxieties take the reigns as winter looms. Still, dizziness marks maturation, and a closer look shows our green chlorophyll acquiring elder hues of red and gold.
+                            </p>
+                        </div>
+                        <br>
+
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/558/editors-note-fall-2015">Read More</a>
                         </p>
 
@@ -638,25 +642,26 @@ green chlorophyll acquiring elder hues of red and gold.</span></span>
 
 
 
-                    <div class="col-md-6 post grid-item post-js">
+                    <div class="col-md-6 text-post post grid-item post-js">
                         <a href="https://theharvardadvocate.com/poetry"><h2 class="subheader">POETRY<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/556/hear-fell-their-sinew" class="no-decoration">
                             <h4 class="subheader-article-name"> hear fell their sinew by Eli Schleicher </h4> 
                         </a>
 
-
-                        <p class="article-summary"></p>
-                        <p>&amp; this sŭn birthed another</p>
-                        <p>with tears in her face -</p>
-                        <p>yellowed or gilded or faded or</p>
-                        <p>green - whatever the sun fancied</p>
-                        <p>for his willowed basement matter</p>
-                        <p>&amp; this sŭn watched another</p>
-                        <p>with splinters at his sapling fingers</p>
-                        <p>from the wood in his veins -</p>
-                        <p>usher three men into the church</p>
-                        <p>where his mother wore her veils</p>
-                        <p></p>
+                        <div class="post-text">
+                            <p class="article-text">&amp; this sŭn birthed another
+                                <br>with tears in her face -
+                                <br>yellowed or gilded or faded or
+                                <br>green - whatever the sun fancied
+                                <br>for his willowed basement matter
+                                <br>&amp; this sŭn watched another
+                                <br>with splinters at his sapling fingers
+                                <br>from the wood in his veins -
+                                <br>usher three men into the church
+                                <br>where his mother wore her veils
+                            </p>
+                        </div>
+                        <br>
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/556/hear-fell-their-sinew">Read More</a>
                         </p>
 
@@ -668,33 +673,16 @@ green chlorophyll acquiring elder hues of red and gold.</span></span>
 
                     <!--                <div class="row">-->
 
-                    <div class="col-md-6 post grid-item post-js">
+                    <div class="col-md-6 text-post post grid-item post-js">
                         <a href="https://theharvardadvocate.com/fiction"><h2 class="subheader">FICTION<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/543/birthday-boy" class="no-decoration">
                             <h4 class="subheader-article-name"> The Birthday Boy by Robert Kim </h4> 
                         </a>
-
-
-                        <p class="article-summary"></p>
-                        <p><span>Lucy hasn’t been able to 
-get even a word in with her boyfriend Tom and she’s just about had 
-enough, though of course the birthday boy was always going to be the 
-center of attention, birthday aside, what with the moody indigo blazer 
-and the black button down and bolo tie and the fake golden crown to 
-which he’s glued a plastic eyeball where the center jewel ought to be, 
-with his charismatic conversational virtuosity and his sizable mental 
-library of anecdotes and his appetite for attention. Here’s a little bit
- about Lucy: Lucy’s got those big eyes that turn heads and inspire 
-double-takes, eyes complexly hazel with droplets of jealous green and 
-melancholic blue mixed in those oceanic irides; her aesthetic can best 
-be described as carefully careless, though tonight she’s paid particular
- attention to the first part, strutting her stuff in her tea-length 
-shimmering dress with a pattern like the night sky and her bold eyeliner
- decisions; she’s exceptionally pretty but doesn’t feel that way about 
-herself, and because of this she’s got a complicated relationship with 
-compliments and mirrors, to give you a sense of the girl.</span>
-                        </p>
-                        <p>1132 characters above</p>
+                        <div class="post-text">
+                            <p class="article-text">Lucy hasn’t been able to get even a word in with her boyfriend Tom and she’s just about had enough, though of course the birthday boy was always going to be the center of attention, birthday aside, what with the moody indigo blazer and the black button down and bolo tie and the fake golden crown to which he’s glued a plastic eyeball where the center jewel ought to be, with his charismatic conversational virtuosity and his sizable mental library of anecdotes and his appetite for attention. Here’s a little bit about Lucy: Lucy’s got those big eyes that turn heads and inspire double-takes, eyes complexly hazel with droplets of jealous green and melancholic blue mixed in those oceanic irides; her aesthetic can best be described as carefully careless, though tonight she’s paid particular attention to the first part, strutting her stuff in her tea-length shimmering dress with a pattern like the night sky and her bold eyeliner decisions; she’s exceptionally pretty but doesn’t feel that way about herself, and because of this she’s got a complicated relationship with compliments and mirrors, to give you a sense of the girl. Now Lucy has kept a straight face through the chips ’n’ dip fiasco and the last minute guest list revisions and even managed to keep her tone deceptively polite during the whole trick candle versus non-trick candle dispute with Tom’s friend Ben, and so now with the party single-handedly wrestled from chaotic Pollockian antimatter to phantasmagoric Boschian chemical-fest, Lucy feels relaxed enough to crack open a Corona and even stick a wedge of lime down its translucent throat, and go over to spend some time with Tom who’s just now escaped the living room (oxblood walls and black furnishings turned dance floor and filled with aforementioned chemically intoxicated twenty-somethings who have no regard for the subtle décor or their own safety) and found a solitary moment in the deserted and gayly decorated kitchen (lots of pastel colors and purposefully out-of-season rainbow winking Christmas lights) among the handles of alcohol and Chinese food (which she’d resisted but he’d insisted on). He brightens up as she approaches and fits her chin by his collarbone and softly grips his firm trapezius muscle. He wraps his arms around her, lightly pinches her ass. “Can I plan a party or can’t I?” “Babe, you’ve really done a fantastic job.” “I did it all for you.” “And that’s the best part.” He smiles wolfishly and they kiss. She thinks Tom is a very good kisser. “And you told people our bedroom is off limits?” “Like a fourteen year old.” “Will you not?” “I’m just being funny, honey.” “It’s not funny.” “But it’s my birthday.” She tries to stare him into apology and then watches his eyes flicker over to the living room. She changes the subject. “Now do you know who that is over there?” Lucy points to the other real eye-vacuum of the night, a girl she’s been mentally referring to as the Bitch with Hair Like Fire. She’s a sallow, moon-faced girl with a bony frame and a rebelliously bored demeanor and a whole lotta make up. But the real kicker is her hair. She’s shaved the sides of her head and dyed the long hair on her scalp a jumble of clown red, warning orange and police-tape yellow, hair which she’s gelled and teased to defy gravity and point upwards so that it looks like her head is on fire. Right now she’s fiddling expertly with the straps of her low cut loose-fitting tank and playing with another guy’s junk through his pants. Tom looks strangely entranced, Lucy notices.
+                            </p>
+                        </div>
+<!--                        <p>1132 characters above</p>-->
                         <!--                        make javacript that cuts of at 3 char before 1129 and end with '...' only on index-->
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/543/birthday-boy">Read More</a>
                         </p>
@@ -703,17 +691,14 @@ compliments and mirrors, to give you a sense of the girl.</span>
 
 
 
-                    <div class="col-md-6 post grid-item post-js">
+                    <div class="col-md-6 text-post post grid-item post-js">
                         <a href="https://theharvardadvocate.com/columns"><h2 class="subheader">COLUMNS<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/article/547/citytarget-sees-itself" class="no-decoration">
                             <h4 class="subheader-article-name"> CityTarget Sees Itself by Matthew Browne </h4> 
                         </a>
-
-
-                        <p class="article-summary"></p>
-                        <p>A few short steps from the entrance escalator in Boston’s new CityTarget stands a section called Local Pride. It is filled with t-shirts whose heathery fabric gives an appearance of wear and fade—a style CityTarget calls vintage. They are emblazoned with catchphrases, figures, and logos meant to invoke the spirit of Boston: How Bout Them Apples runs overtop a clover, Capt. Carl Yastrzemski surrounds an image of the beloved Red Sox great taking a swing, faded logos of Cape Cod potato chips and Marshmallow Fluff sit just beneath the chest of two v-necks.</p>
-                        <p>&nbsp;</p>
-                        <p></p>
+                        <div class="post-text">
+                            <p class="article-text">A few short steps from the entrance escalator in Boston’s new CityTarget stands a section called Local Pride. It is filled with t-shirts whose heathery fabric gives an appearance of wear and fade—a style CityTarget calls vintage. They are emblazoned with catchphrases, figures, and logos meant to invoke the spirit of Boston: How Bout Them Apples runs overtop a clover, Capt. Carl Yastrzemski surrounds an image of the beloved Red Sox great taking a swing, faded logos of Cape Cod potato chips and Marshmallow Fluff sit just beneath the chest of two v-necks.</p>
+                        </div>
                         <p><a class="read-more" href="https://theharvardadvocate.com/article/547/citytarget-sees-itself">Read More</a>
                         </p>
 
@@ -725,38 +710,26 @@ compliments and mirrors, to give you a sense of the girl.</span>
 
                     <!--                <div class="row">-->
 
-                    <div class="col-md-6 post grid-item post-js">
+                    <div class="col-md-6 text-post post grid-item post-js">
                         <a href="https://theharvardadvocate.com/blog"><h2 class="subheader">FROM THE BLOG<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/blog/post/symposium-danger" class="no-decoration">
                             <h4 class="subheader-article-name"> Symposium: DANGER by Ariana Chaivaranon, Owen Ojo, Sarah Toomey, and Francesca Violich </h4> 
                         </a>
-
-
-
-                        <!-- How to check if image exists:
-            http://stackoverflow.com/questions/6637168/python-django-templates-and-testing-if-a-variable-is-null-or-empty-string?rq=1
-            http://stackoverflow.com/questions/12507281/determine-empty-template-variable-in-django -->
-
-
-                        <p class="article-summary">In anticipation of the coming DANGER issue, we reintroduce the Symposium—a collection of artistic creation centering on a single topic. This month, Ariana Chaivaranon, Owen Ojo, Francesca Violich, and Sarah Toomey contemplate “Danger.” ONE "Wait" is part of a series of paintings that place figures within a narrative of death. This series, painted on loose canvas, is tacked directly to the wall of the exhibition space, lending a rough immediacy and implying transience. The subjects are dislocated from the time and space they occupy through the use of distinct coloring and paint application between the figure and ground. Both the formal elements and the narrative of the piece play to the disturbance of the viewer. By Ariana Chaivaranon ‘18 TWO I. so i have taken taekwondo, broken a board with one hand the summer going into fourth grade.</p>
+                        <div class="post-text">
+                            <p class="article-text">In anticipation of the coming DANGER issue, we reintroduce the Symposium—a collection of artistic creation centering on a single topic. This month, Ariana Chaivaranon, Owen Ojo, Francesca Violich, and Sarah Toomey contemplate “Danger.” ONE "Wait" is part of a series of paintings that place figures within a narrative of death. This series, painted on loose canvas, is tacked directly to the wall of the exhibition space, lending a rough immediacy and implying transience. The subjects are dislocated from the time and space they occupy through the use of distinct coloring and paint application between the figure and ground. Both the formal elements and the narrative of the piece play to the disturbance of the viewer. By Ariana Chaivaranon ‘18 TWO I. so i have taken taekwondo, broken a board with one hand the summer going into fourth grade.</p>
+                        </div>
                         <p><a class="read-more" href="#">Read More</a>
                         </p>
                     </div>
 
-                    <div class="col-md-6 post grid-item post-js">
+                    <div class="col-md-6 text-post post grid-item post-js">
                         <a href="https://theharvardadvocate.com/blog"><h2 class="subheader">FROM THE BLOG<hr class="subheader-border"></h2></a>
                         <a href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016" class="no-decoration">
                             <h4 class="subheader-article-name"> BODIES: Solo Exhibition by Lily Scherlis </h4> 
                         </a>
-
-
-
-                        <!-- How to check if image exists:
-            http://stackoverflow.com/questions/6637168/python-django-templates-and-testing-if-a-variable-is-null-or-empty-string?rq=1
-            http://stackoverflow.com/questions/12507281/determine-empty-template-variable-in-django -->
-
-
-                        <p class="article-summary">For my upcoming show, I have created a piece just for you. It is intimate and personal. When you come to the wing of the museum where I have installed my work, you sheepishly pick up a program and hurry in. There is no one else here. They know this show is for you, and will be kind enough to leave you alone with it. You pass into a great marble atrium. It is cool and grey and smells like wet rocks. Everyone you have ever known is facing you. They are not moving or even breathing, but they are looking at you. Your high school english teacher is looking at you kindly. Your sixth grade crush is looking at you kindly. The kid you babysat a couple times when you needed pocket money in college is looking at you kindly. You duck behind a black curtain into a tiny dark room where a film plays. In the film, your first love is speaking, looking you right in the eye.</p>
+                        <div class="post-text">
+                            <p class="article-text">For my upcoming show, I have created a piece just for you. It is intimate and personal. When you come to the wing of the museum where I have installed my work, you sheepishly pick up a program and hurry in. There is no one else here. They know this show is for you, and will be kind enough to leave you alone with it. You pass into a great marble atrium. It is cool and grey and smells like wet rocks. Everyone you have ever known is facing you. They are not moving or even breathing, but they are looking at you. Your high school english teacher is looking at you kindly. Your sixth grade crush is looking at you kindly. The kid you babysat a couple times when you needed pocket money in college is looking at you kindly. You duck behind a black curtain into a tiny dark room where a film plays. In the film, your first love is speaking, looking you right in the eye.</p>
+                        </div>
                         <p><a class="read-more" href="https://theharvardadvocate.com/blog/post/Solo_03_20_2016">Read More</a>
                         </p>
                     </div>

@@ -11,6 +11,7 @@ function func() {
             titleNew = title.trim();
         }
         $(this).html(titleNew + '<h3 class="subheader-article-author">' + author + '</h3>')
+        //$(this).append('<h3 class="subheader-article-author">' + author + '</h3>');
         //$(this).html('hi-start || '+orignial_text+' || hi-end');
     });
 }
