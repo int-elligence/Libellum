@@ -12,7 +12,7 @@ function paragraph_limit() {
     
     //pathname = "/";
 
-    if (pathname == "/" || pathname == "/inde" || pathname == "/page" || pathname == "/tagg") {
+    if (pathname == "/" || pathname == "/inde" || pathname == "/page" || pathname == "/tagg" || pathname=="/Libe") {
 //        $(".post-text").html(pathname+" we got da if");
         
         $('.post-text').each(function (index, element) {
@@ -47,7 +47,7 @@ function paragraph_limit() {
             }
         });
     } else{
-        $(".post-text").html(pathname+" we got da original else");
+        //$(".post-text").html(pathname+" we got da original else");
         $('.post-text').each(function (index, element) {
             //$(this).html("HIIIHOISAKHLKJHSAD");
         });

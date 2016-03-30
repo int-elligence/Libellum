@@ -374,10 +374,10 @@ article.poetry p {
 
 }
 .subheader-article-name {
-    font-family: Times;
+    font-family: 'EBGaramond08R';
     text-align: center;
     margin: 5px 5px 0px 5px;
-    font-size: 16px;
+    font-size: 19px;
 }
 .subheader-article-author {
     font-family: Times;
