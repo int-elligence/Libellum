@@ -3,23 +3,24 @@ $(document).ready(paragraph_limit)
 function paragraph_limit() {
     var preferredLength = 1132;
     var articleClass = '.post-text';
-   
+
     var pathname = window.location.pathname;
+    var pathnameOriginal = pathname;
     if (pathname.length > 5) {
-            pathname = pathname.substr(0, 5);
-        }
-//    $(".post-text").html(pathname);
-    
+        pathname = pathname.substr(0, 5);
+    }
+    //    $(".post-text").html(pathname);
+
     //pathname = "/";
 
-    if (pathname == "/" || pathname == "/inde" || pathname == "/page" || pathname == "/tagg" || pathname=="/Libe") {
-//        $(".post-text").html(pathname+" we got da if");
-        
+    if (pathname == "/" || pathname == "/inde" || pathname == "/page" || pathname == "/tagg" || pathnameOriginal == "/Libellum/" || pathnameOriginal == "/Libellum/index.html") {
+        //        $(".post-text").html(pathname+" we got da if");
+
         $('.post-text').each(function (index, element) {
             var articleLength = $(this).text().length;
             // INITIALIZE
             if (articleLength > preferredLength) {
-//                $(".post-text").html(pathname+" WE got da if --> if");
+                //                $(".post-text").html(pathname+" WE got da if --> if");
                 var myCode = $(this).html();
                 //imgStartPlace=myCode.indexOf("<img");
                 //  $(".demo").text(imgStartPlace);
@@ -27,18 +28,18 @@ function paragraph_limit() {
                 var newew1 = newew;
                 var newew2 = newew;
                 if (newew.lastIndexOf('<') > newew.lastIndexOf('>')) {
-//                    $(".post-text").html(pathname+" WE got da if --> if --> if");
+                    //                    $(".post-text").html(pathname+" WE got da if --> if --> if");
                     var newew1 = newew.substring(0, newew.lastIndexOf('<') - 1);
                 } else {
-//                    $(".post-text").html(pathname+" WE got da if --> if --> else");
+                    //                    $(".post-text").html(pathname+" WE got da if --> if --> else");
                     newew1a = newew;
                     var newew1SpaceIndex = newew1a.substring(0, newew1a.length).lastIndexOf(' ');
                     var newew1Space = newew1a.substring(0, newew1SpaceIndex);
                     if (newew1a < newew1Space + 10) {
-//                        $(".post-text").html(pathname+" WE got da if --> if --> else --> if");
+                        //                        $(".post-text").html(pathname+" WE got da if --> if --> else --> if");
                         newew1 = newew1Space;
                     } else {
-//                        $(".post-text").html(pathname+" WE got da if --> if --> else --> else");
+                        //                        $(".post-text").html(pathname+" WE got da if --> if --> else --> else");
                         newew1 = newew1_;
                     }
                 }
@@ -46,12 +47,14 @@ function paragraph_limit() {
                 $(this).html(newew1.trim() + " <b>. . .<b>");
             }
         });
-    } else{
+    } else {
         //$(".post-text").html(pathname+" we got da original else");
         $('.post-text').each(function (index, element) {
             //$(this).html("HIIIHOISAKHLKJHSAD");
         });
-}
+        $('<hr style="color:aqua; border:1px solid aqua;">').appendTo('footer');
+    }
+    
 }
 /*
     var preferredLength = 532;

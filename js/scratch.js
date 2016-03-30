@@ -10,8 +10,13 @@ function func() {
             author = "";
             titleNew = title.trim();
         }
-        $(this).html(titleNew + '<h3 class="subheader-article-author">' + author + '</h3>')
-        //$(this).append('<h3 class="subheader-article-author">' + author + '</h3>');
+//        $(this).html(titleNew + '<h3 class="subheader-article-author">' + author + '</h3>');
+        var h3string = '<h3 class="subheader-article-author">' + author + '</h3>';
+        
+        $(this).html(titleNew);
+        $(this).append(h3string);
+       
         //$(this).html('hi-start || '+orignial_text+' || hi-end');
     });
+     $('<br>').appendTo('h4.subheader-article-name');
 }

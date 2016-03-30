@@ -364,7 +364,23 @@ article.poetry p {
     text-decoration: none;
     font-family: futura;
     padding: 10px;
-    font-size: 18px;
+    font-size: 22px;
+}
+/*div .grid-item a*/
+/*h2.subheader:hover,
+div.grid-item:hover .subheader,
+div.grid-item a:hover .subheader,
+div.grid-item:hover a{
+    text-decoration: none;
+    text-underline-position: left;
+    color:aqua;
+}*/
+.subheaderlink,
+.subheaderlink:hover{
+    text-decoration: none;
+}
+.subheader:hover{
+    text-shadow: 1.5px 1.5px #F3BB2A;
 }
 .central-message {
     font-size: 19px;
@@ -374,8 +390,10 @@ article.poetry p {
 
 }
 .subheader-article-name {
-    font-family: 'EBGaramond08R';
+    font-family: 'EBGaramond12R';
+    font-weight: normal;
     text-align: center;
+    color: #000;
     margin: 5px 5px 0px 5px;
     font-size: 19px;
 }
